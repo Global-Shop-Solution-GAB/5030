@@ -1,0 +1,1068 @@
+Program.Sub.ScreenSU.Start
+Gui.Form..Create
+Gui.Form..Size(20850,14460)
+Gui.Form..MinX(0)
+Gui.Form..MinY(0)
+Gui.Form..Position(0,0)
+Gui.Form..BackColor(-2147483633)
+Gui.Form..MousePointer(0)
+Gui.Form..Event(UnLoad,Form_UnLoad)
+Gui.Form..Caption("Parce Trace")
+Gui.Form.cmdBrowseFile.Create(Button)
+Gui.Form.cmdBrowseFile.Size(855,375)
+Gui.Form.cmdBrowseFile.Position(19680,615)
+Gui.Form.cmdBrowseFile.Caption("^")
+Gui.Form.cmdBrowseFile.Event(Click,cmdBrowseFile_Click)
+Gui.Form.txtFilePath.Create(TextBox,"",True,19275,300,0,255,645,True,0,"Arial",8,-2147483643,2)
+Gui.Form.lblFilePath.Create(Label,"Core Trace File path",True,1935,255,0,255,420,True,0,"Arial",8,-2147483633,0)
+Gui.Form.gs.Create(GsGridControl)
+Gui.Form.gs.Size(11370,11340)
+Gui.Form.gs.Position(255,2355)
+Gui.Form.gs.Event(RowCellClick,gs_RowCellClick)
+Gui.Form.cmdOK.Create(Button)
+Gui.Form.cmdOK.Size(855,375)
+Gui.Form.cmdOK.Position(255,1860)
+Gui.Form.cmdOK.Caption("OK")
+Gui.Form.cmdOK.Event(Click,cmdOK_Click)
+Gui.Form.proBar.Create(ProgressBar)
+Gui.Form.proBar.Visible(False)
+Gui.Form.proBar.Size(20250,255)
+Gui.Form.proBar.Position(285,75)
+Gui.Form.lblSearchText.Create(Label,"Search Text",True,945,255,0,270,1155,True,0,"Arial",8,-2147483633,0)
+Gui.Form.txtSearchText.Create(TextBox,"Global\FILES\",True,3120,300,0,255,1410,True,0,"Arial",8,-2147483643,2)
+Gui.Form.lblSub1.Create(Label,"Sub Text 1",True,945,255,0,3705,1155,True,0,"Arial",8,-2147483633,0)
+Gui.Form.txtSub1.Create(TextBox,"File Open",True,900,300,0,3705,1410,True,0,"Arial",8,-2147483643,2)
+Gui.Form.txtSub2.Create(TextBox,"Open",True,870,300,0,4785,1410,True,0,"Arial",8,-2147483643,2)
+Gui.Form.lblSub2.Create(Label,"Sub Text 2",True,945,255,0,4785,1155,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblSub3.Create(Label,"Sub Text 3",True,945,255,0,5880,1155,True,0,"Arial",8,-2147483633,0)
+Gui.Form.txtSub3.Create(TextBox,"Read",True,1080,300,0,5820,1410,True,0,"Arial",8,-2147483643,2)
+Gui.Form.txtSub4.Create(TextBox,"Write",True,1080,300,0,7050,1410,True,0,"Arial",8,-2147483643,2)
+Gui.Form.lblSub4.Create(Label,"Sub Text 4",True,945,255,0,7020,1155,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblSub5.Create(Label,"Sub Text 5",True,945,255,0,8310,1155,True,0,"Arial",8,-2147483633,0)
+Gui.Form.txtSub5.Create(TextBox,"Close",True,1080,300,0,8325,1410,True,0,"Arial",8,-2147483643,2)
+Gui.Form.cmdClearTables.Create(Button)
+Gui.Form.cmdClearTables.Size(855,375)
+Gui.Form.cmdClearTables.Position(15750,13290)
+Gui.Form.cmdClearTables.Caption("Clear")
+Gui.Form.cmdClearTables.Event(Click,cmdClearTables_Click)
+Gui.Form.cmdCheck.Create(Button)
+Gui.Form.cmdCheck.Size(855,375)
+Gui.Form.cmdCheck.Position(16665,1650)
+Gui.Form.cmdCheck.Caption("Check")
+Gui.Form.cmdCheck.Event(Click,cmdCheck_Click)
+Gui.Form.lblValue.Create(Label,"Value",True,1020,255,0,16665,1065,True,0,"Arial",8,-2147483633,0)
+Gui.Form.txtValue.Create(TextBox,"",True,1845,300,0,16665,1290,True,0,"Arial",8,-2147483643,2)
+Gui.Form.lblTableField.Create(Label,"Table - Field",True,1020,255,0,16665,2130,True,0,"Arial",8,-2147483633,0)
+Gui.Form.gsTables.Create(GsGridControl)
+Gui.Form.gsTables.Size(2310,10440)
+Gui.Form.gsTables.Position(14280,2355)
+Gui.Form.gsTablesFields.Create(GsGridControl)
+Gui.Form.gsTablesFields.Size(3870,10815)
+Gui.Form.gsTablesFields.Position(16665,2355)
+Gui.Form.f1.Create(Frame)
+Gui.Form.f1.Size(7995,570)
+Gui.Form.f1.Position(3600,1740)
+Gui.Form.chk1.Create(CheckBox)
+Gui.Form.chk1.Size(360,360)
+Gui.Form.chk1.Position(165,180)
+Gui.Form.chk1.Parent("f1")
+Gui.Form.chk2.Create(CheckBox)
+Gui.Form.chk2.Size(360,360)
+Gui.Form.chk2.Position(1200,180)
+Gui.Form.chk2.Parent("f1")
+Gui.Form.chk3.Create(CheckBox)
+Gui.Form.chk3.Size(360,360)
+Gui.Form.chk3.Position(2250,180)
+Gui.Form.chk3.Parent("f1")
+Gui.Form.chk4.Create(CheckBox)
+Gui.Form.chk4.Size(360,360)
+Gui.Form.chk4.Position(3465,180)
+Gui.Form.chk4.Parent("f1")
+Gui.Form.chk4.Value(1)
+Gui.Form.chk5.Create(CheckBox)
+Gui.Form.chk5.Size(360,360)
+Gui.Form.chk5.Position(4740,180)
+Gui.Form.chk5.Parent("f1")
+Gui.Form.cmdFindAllTable.Create(Button)
+Gui.Form.cmdFindAllTable.Size(1095,285)
+Gui.Form.cmdFindAllTable.Position(6795,195)
+Gui.Form.cmdFindAllTable.Parent("f1")
+Gui.Form.cmdFindAllTable.Caption("Find Table")
+Gui.Form.cmdFindAllTable.Event(Click,cmdFindAllTable_Click)
+Gui.Form.cmdFindAllTable.FontSize(7)
+Gui.Form.chkAll.Create(CheckBox)
+Gui.Form.chkAll.Size(660,360)
+Gui.Form.chkAll.Position(5910,150)
+Gui.Form.chkAll.Parent("f1")
+Gui.Form.chkAll.Caption("All")
+Gui.Form.gsFile.Create(GsGridControl)
+Gui.Form.gsFile.Size(2445,10065)
+Gui.Form.gsFile.Position(11745,2715)
+Gui.Form.gsFile.Event(RowCellClick,gsFile_RowCellClick)
+Gui.Form.txtAddFile.Create(TextBox,"",True,2460,300,0,11730,12885,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtAddTable.Create(TextBox,"",True,2310,300,0,14280,12885,True,0,"Arial",8,-2147483643,1)
+Gui.Form.cmdAddFile.Create(Button)
+Gui.Form.cmdAddFile.Size(855,375)
+Gui.Form.cmdAddFile.Position(11730,13290)
+Gui.Form.cmdAddFile.Caption("Add File")
+Gui.Form.cmdAddFile.Event(Click,cmdAddFile_Click)
+Gui.Form.cmdAddTable.Create(Button)
+Gui.Form.cmdAddTable.Size(1035,375)
+Gui.Form.cmdAddTable.Position(14280,13290)
+Gui.Form.cmdAddTable.Caption("Add Table")
+Gui.Form.cmdAddTable.Event(Click,cmdAddTable_Click)
+Gui.Form.chkLike.Create(CheckBox)
+Gui.Form.chkLike.Size(705,360)
+Gui.Form.chkLike.Position(18600,1260)
+Gui.Form.chkLike.Caption("Like")
+Gui.Form.chkLike.Visible(False)
+Gui.Form.cmdClearTablesFields.Create(Button)
+Gui.Form.cmdClearTablesFields.Size(855,375)
+Gui.Form.cmdClearTablesFields.Position(19680,13290)
+Gui.Form.cmdClearTablesFields.Caption("Clear")
+Gui.Form.cmdClearTablesFields.Event(Click,cmdClearTablesFields_Click)
+Gui.Form.cmdClearFiles.Create(Button)
+Gui.Form.cmdClearFiles.Size(855,375)
+Gui.Form.cmdClearFiles.Position(13335,13260)
+Gui.Form.cmdClearFiles.Caption("Clear")
+Gui.Form.cmdClearFiles.Event(Click,cmdClearFiles_Click)
+Gui.Form.txtScriptPath.Create(TextBox,"",False,11160,300,0,8355,330,True,0,"Arial",8,-2147483643,2)
+Gui.Form.lbl1.Create(Label,"Script Path",False,930,255,0,7410,405,True,0,"Arial",8,-2147483633,0)
+Gui.Form.cmdAllTablesFromDB.Create(Button)
+Gui.Form.cmdAllTablesFromDB.Size(1815,375)
+Gui.Form.cmdAllTablesFromDB.Position(14670,1875)
+Gui.Form.cmdAllTablesFromDB.Caption("All tables from  DB")
+Gui.Form.cmdAllTablesFromDB.Event(Click,cmdAllTablesFromDB_Click)
+Gui.Form.cmdChangeDB.Create(Button)
+Gui.Form.cmdChangeDB.Size(1110,375)
+Gui.Form.cmdChangeDB.Position(14670,1425)
+Gui.Form.cmdChangeDB.Caption("Change DB")
+Gui.Form.cmdChangeDB.Event(Click,cmdChangeDB_Click)
+Gui.Form.lblSub9.Create(Label,"DB",True,345,255,0,14310,1110,True,0,"Arial",8,-2147483633,0)
+Gui.Form.cmdGetNowTime.Create(Button)
+Gui.Form.cmdGetNowTime.Size(1305,375)
+Gui.Form.cmdGetNowTime.Position(12855,975)
+Gui.Form.cmdGetNowTime.Event(Click,cmdStartTrace_Click)
+Gui.Form.cmdGetNowTime.Caption("Get Now Time")
+Gui.Form.cmdCompare.Create(Button)
+Gui.Form.cmdCompare.Size(930,375)
+Gui.Form.cmdCompare.Position(18015,1635)
+Gui.Form.cmdCompare.Caption("Compare")
+Gui.Form.cmdCompare.Event(Click,cmdCompare_Click)
+Gui.Form.cmdCompare.Visible(False)
+Gui.Form.lblStartTime.Create(TextBox,"",True,2355,300,0,11820,1410,True,0,"Arial",8,-2147483643,1)
+Gui.Form.cmdPullFileAfterTime.Create(Button)
+Gui.Form.cmdPullFileAfterTime.Size(2370,375)
+Gui.Form.cmdPullFileAfterTime.Position(11820,1770)
+Gui.Form.cmdPullFileAfterTime.Caption("Pull File after time")
+Gui.Form.cmdPullFileAfterTime.Event(Click,cmdPullFileAfterTime_Click)
+Gui.Form.cmdPullAllFile.Create(Button)
+Gui.Form.cmdPullAllFile.Size(2370,375)
+Gui.Form.cmdPullAllFile.Position(11820,2205)
+Gui.Form.cmdPullAllFile.Caption("Pull All File")
+Gui.Form.cmdPullAllFile.Event(Click,cmdPullAllFile_Click)
+Gui.Form.cboDatabase.Create(ComboBox)
+Gui.Form.cboDatabase.Size(1845,330)
+Gui.Form.cboDatabase.Position(14670,1020)
+Gui.Form.cmdWrappup.Create(Button)
+Gui.Form.cmdWrappup.Size(855,375)
+Gui.Form.cmdWrappup.Position(19680,1110)
+Gui.Form.cmdWrappup.Caption("W")
+Gui.Form.cmdWrappup.Event(Click,cmdWrappup_Click)
+Gui.Form.cmdWrappup.Visible(False)
+Gui.Text..Create
+Gui.Text..Size(20760,1920)
+Gui.Text..MinX(0)
+Gui.Text..MinY(0)
+Gui.Text..Position(0,0)
+Gui.Text..BackColor(-2147483633)
+Gui.Text..MousePointer(0)
+Gui.Text..Event(UnLoad,Text_UnLoad)
+Gui.Text.txtFullText.Create(TextBoxR)
+Gui.Text.txtFullText.Size(20070,915)
+Gui.Text.txtFullText.Position(225,255)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global..BulkDeclareString(sGSSerialize, sGSProgramSerialize, sHookSerialize)
+v.Global.PDSN.Declare(String)
+v.Global.dStart.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'BN, Dec 2017
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sDSNList,sRet)
+v.Local..BulkDeclareLong(iCnt,iComboListIndex)
+v.Local..BulkDeclareDate(d,d2)
+v.Local.bEx.Declare
+
+f.ODBC.Connection!conx.OpenCompanyConnection(1000)
+
+'Database list
+Function.ODBC.Misc.GETDSNLIST(v.Local.sDSNList)
+F.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sDSNList.UBound,1)
+	f.Intrinsic.String.IsInString(v.Local.sDSNList(v.Local.iCnt),"GLOBAL_",True,V.Local.bEx)
+	f.Intrinsic.Control.If(v.Local.bEx)
+		gui.Form.cboDatabase.AddItem(v.Local.sDSNList(v.Local.iCnt),v.Local.iComboListIndex)
+		f.Intrinsic.Math.Add(v.Local.iComboListIndex,1,v.Local.iComboListIndex)
+	f.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(v.Local.iCnt)
+gui.Form.cboDatabase.Text(v.Ambient.PDSN)
+v.Global.PDSN.Set(v.Ambient.PDSN)
+gui.Form.txtScriptPath.Text(v.Ambient.ScriptPath)
+
+F.Intrinsic.Control.CallSub("Load")
+
+gui.Form..Show
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Parse_Trace.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Main.End
+
+Program.Sub.cmdChangeDB_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdRefresh_Click_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare
+
+f.Intrinsic.Control.If(V.Screen.Form!cboDatabase.Text,<>,"")
+	f.Intrinsic.UI.InvokeWaitDialog("Changing DB")
+	f.ODBC.Connection!conx.Close
+	F.odbc.Connection!conx.OpenConnection(v.Screen.Form!cboDatabase.Text,"Master","Master",600)
+	v.Global.PDSN.Set(v.Screen.Form!cboDatabase.Text)
+	f.Intrinsic.UI.CloseWaitDialog
+f.Intrinsic.Control.Else
+	f.Intrinsic.UI.Msgbox("Please select DB")
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdRefresh_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdChangeDB_Click.End
+
+Program.Sub.LOAD.Start
+f.Intrinsic.Control.CallSub(create_d)
+f.Intrinsic.Control.CallSub(create_filetable)
+f.Intrinsic.Control.CallSub(create_db)
+f.Intrinsic.Control.CallSub(create_dbf)
+f.Intrinsic.Control.CallSub(check_custom_table)
+Program.Sub.LOAD.End
+
+Program.Sub.Create_D.Start
+F.Intrinsic.Control.SetErrorHandler("Create_Table_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+f.Intrinsic.Control.If(v.DataTable.D.Exists,=,True)
+	f.Data.DataTable.Close("D")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.Create("D",True)
+f.Data.DataTable.AddColumn("D","Time","string","")
+f.Data.DataTable.AddColumn("D","File","string","")
+f.Data.DataTable.AddColumn("D","SubText1","string","")
+f.Data.DataTable.AddColumn("D","SubText2","string","")
+f.Data.DataTable.AddColumn("D","SubText3","string","")
+f.Data.DataTable.AddColumn("D","SubText4","string","")
+f.Data.DataTable.AddColumn("D","SubText5","string","")
+f.Data.DataTable.AddColumn("D","FullText","string","")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Create_Table_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Parse_Trace.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Create_D.End
+
+Program.Sub.create_FileTable.Start
+f.Intrinsic.Control.If(v.DataTable.DBFile.Exists,=,True)
+	f.Data.DataTable.Close("DBFile")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.Create("DBFile",True)
+f.Data.DataTable.AddColumn("DBFile","File","string","")
+gui.Form.gsFile.AddGridviewFromDatatable("GVDBFile","DBFile")
+gui.Form.gsFile.MainView("GVDBFile")
+'rowcell click
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","AllowEdit","False")
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","ReadOnly","True")
+'Link
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","CellForeColor","Blue")
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","CellFontUnderline","True")
+Program.Sub.create_FileTable.End
+
+Program.Sub.Create_DB.Start
+f.Intrinsic.Control.If(v.DataTable.DB.Exists,=,True)
+	f.Data.DataTable.Close("DB")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.Create("DB",True)
+f.Data.DataTable.AddColumn("DB","TableName","string","")
+gui.Form.gsTables.AddGridviewFromDatatable("GVDB","DB")
+gui.Form.gsTables.MainView("GVDB")
+Program.Sub.Create_DB.End
+
+Program.Sub.cmdAllTablesFromDB_Click.Start
+f.Intrinsic.Control.CallSub(create_db_whole_db)
+Program.Sub.cmdAllTablesFromDB_Click.End
+
+Program.Sub.Create_DB_Whole_DB.Start
+f.Intrinsic.Control.If(v.DataTable.DB.Exists,=,True)
+	f.Data.DataTable.Close("DB")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("DB","conx","Select Xf$Name As TableName FROM X$File ORDER BY TableName",True)
+gui.Form.gsTables.AddGridviewFromDatatable("GVDB","DB")
+gui.Form.gsTables.MainView("GVDB")
+Program.Sub.Create_DB_Whole_DB.End
+
+Program.Sub.Create_DBF.Start
+f.Intrinsic.Control.If(v.DataTable.DBF.Exists,=,True)
+	f.Data.DataTable.Close("DBF")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.Create("DBF",True)
+f.Data.DataTable.AddColumn("DBF","Table","string","")
+f.Data.DataTable.AddColumn("DBF","Field","string","")
+gui.Form.gsTablesFields.AddGridviewFromDatatable("GVDBF","DBF")
+gui.Form.gsTablesFields.MainView("GVDBF")
+
+Program.Sub.Create_DBF.End
+
+Program.Sub.cmdClearTables_Click.Start
+f.Intrinsic.Control.CallSub(create_db)
+Program.Sub.cmdClearTables_Click.End
+
+Program.Sub.cmdClearTablesFields_Click.Start
+f.Intrinsic.Control.CallSub(create_dbf)
+Program.Sub.cmdClearTablesFields_Click.End
+
+Program.Sub.cmdClearFiles_Click.Start
+f.Intrinsic.Control.CallSub(create_filetable)
+Program.Sub.cmdClearFiles_Click.End
+
+Program.Sub.cmdBrowseFile_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdBrowseFile_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sFilePath,sLocalTemp)
+
+f.Intrinsic.String.Build("{0}{1}",V.Caller.LocalGSSTempDir,"\GSS",v.Local.sLocalTemp)
+F.Intrinsic.UI.ShowOpenFileDialog(V.Local.sLocalTemp,"*|*.glog*","",V.Local.sFilePath)
+F.Intrinsic.Control.If(V.Local.sFilePath,=,"***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No File Was Selected")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+gui.Form.txtFilePath.Text(v.Local.sFilePath)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdBrowseFile_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Parse_Trace.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdBrowseFile_Click.End
+
+Program.Sub.cmdOK_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdOK_Click_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sText,sSearchText,sSub1,sSub2,sSub3,sSub4,sSub5,sSubText1,sSubText2,sSubText3,sSubText4,sSubText5,sTime,sTextProcess,sFile)
+v.Local..BulkDeclareLong(iCnt,iFilePosition)
+v.Local..BulkDeclareBoolean(bInString,bInStringSubText)
+
+f.Intrinsic.Control.CallSub(create_D)
+v.Local.sSearchText.Set(v.Screen.Form!txtSearchText.Text.Trim)
+v.Local.sSub1.Set(v.Screen.Form!txtSub1.Text.Trim)
+v.Local.sSub2.Set(v.Screen.Form!txtSub2.Text.Trim)
+v.Local.sSub3.Set(v.Screen.Form!txtSub3.Text.Trim)
+v.Local.sSub4.Set(v.Screen.Form!txtSub4.Text.Trim)
+v.Local.sSub5.Set(v.Screen.Form!txtSub5.Text.Trim)
+f.Intrinsic.File.File2String(v.Screen.Form!txtFilePath.Text.Trim,v.Local.sText)
+
+f.Intrinsic.String.Split(v.Local.sText,v.Ambient.NewLine,v.Local.sText)
+gui.Form.proBar.Visible(True)
+gui.Form.proBar.Max(v.Local.sText.UBound)
+f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sText.UBound,1)
+	gui.Form.proBar.Value(v.Local.iCnt)
+	F.Intrinsic.String.IsInString(v.Local.sText(v.Local.iCnt),v.Local.sSearchText,True,v.Local.bInString)
+	f.Intrinsic.Control.If(v.Local.bInString,=,True)
+		v.Local.sTextProcess.Set(v.Local.sText(v.Local.iCnt))
+		f.Intrinsic.String.Mid(v.Local.sTextProcess,17,15,v.Local.sTime)
+		f.Intrinsic.String.Replace(v.local.sTextProcess,v.Local.sTextProcess.left34,"",v.Local.sTextProcess)		
+		Function.Intrinsic.String.Instr(v.Local.sTextProcess,"Global\Files\",0,v.Local.iFilePosition)
+		f.Intrinsic.Math.Add(v.Local.iFilePosition,13,v.Local.iFilePosition)
+		f.Intrinsic.String.Mid(v.Local.sTextProcess,v.Local.iFilePosition,100,v.Local.sFile)
+		f.Intrinsic.String.Replace(v.Local.sFile,",","*!*",v.Local.sFile)
+		f.Intrinsic.String.Replace(v.Local.sFile,";","*!*",v.Local.sFile)
+		f.Intrinsic.String.Replace(v.Local.sFile," ","*!*",v.Local.sFile)
+		f.Intrinsic.String.Replace(v.Local.sFile,"{&}","*!*",v.Local.sFile)
+		f.Intrinsic.String.Replace(v.Local.sFile,"||","*!*",v.Local.sFile)
+		f.Intrinsic.String.Split(v.Local.sFile,"*!*",v.Local.sFile)		
+		v.Local.sSubText1.Set("")
+		v.Local.sSubText2.Set("")
+		v.Local.sSubText3.Set("")
+		v.Local.sSubText4.Set("")
+		v.Local.sSubText5.Set("")
+		f.Intrinsic.String.IsInString(v.Local.sTextProcess,v.Local.sSub1,True,v.Local.bInStringSubText)
+		f.Intrinsic.Control.If(v.Local.bInStringSubText,=,True)
+			v.Local.sSubText1.set(v.Local.sSub1)
+		f.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.String.IsInString(v.Local.sTextProcess,v.Local.sSub2,True,v.Local.bInStringSubText)
+		f.Intrinsic.Control.If(v.Local.bInStringSubText,=,True)
+			v.Local.sSubText2.set(v.Local.sSub2)
+		f.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.String.IsInString(v.Local.sTextProcess,v.Local.sSub3,True,v.Local.bInStringSubText)
+		f.Intrinsic.Control.If(v.Local.bInStringSubText,=,True)
+			v.Local.sSubText3.set(v.Local.sSub3)
+		f.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.String.IsInString(v.Local.sTextProcess,v.Local.sSub4,True,v.Local.bInStringSubText)
+		f.Intrinsic.Control.If(v.Local.bInStringSubText,=,True)
+			v.Local.sSubText4.set(v.Local.sSub4)
+		f.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.String.IsInString(v.Local.sTextProcess,v.Local.sSub5,True,v.Local.bInStringSubText)
+		f.Intrinsic.Control.If(v.Local.bInStringSubText,=,True)
+			v.Local.sSubText5.set(v.Local.sSub5)
+		f.Intrinsic.Control.EndIf		
+		
+		f.Data.DataTable.AddRow("D","Time",v.Local.sTime,"File",v.Local.sFile(0),"SubText1",v.Local.sSubText1,"SubText2",v.Local.sSubText2,"SubText3",v.Local.sSubText3,"SubText4",v.Local.sSubText4,"SubText5",v.Local.sSubText5,"FullText",v.Local.sTextProcess)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Next(v.Local.iCnt)
+
+gui.Form.proBar.Visible(False)
+
+gui.Form.gs.AddGridviewFromDatatable("GV","D")
+f.Intrinsic.Control.CallSub(format_grids)
+gui.Form.gs.MainView("GV")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdOK_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Parse_Trace.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdOK_Click.End
+
+Program.Sub.Format_Grids.Start
+F.Intrinsic.Control.SetErrorHandler("Format_Grids_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+Gui.Form.gs.SuspendLayout()
+Gui.Form.gs.SetGridViewProperty("GV","MultiSelect",True)
+Gui.Form.gs.SetGridViewProperty("GV","AllowSort",True)
+Gui.Form.gs.SetGridViewProperty("GV","AllowFilter",True)
+Gui.Form.gs.SetGridViewProperty("GV","Showgrouppanel",False)
+Gui.Form.gs.SetGridViewProperty("GV","AllowColumnResizing",False)
+Gui.Form.gs.SetGridViewProperty("GV","Enableappearanceoddrow",True)
+Gui.Form.gs.SetGridViewProperty("GV","OptionsFindAlwaysVisible",True)
+Gui.Form.gs.SetGridViewProperty("GV","OptionsViewShowAutoFilterRow",True)
+Gui.Form.gs.SetGridViewProperty("GV","OptionsFilterUseNewCustomFilterDialog",True)
+'For_RowCellClick (not editable)
+f.Intrinsic.Control.CallSub(FormatBulk,"sInputColumns","File,FullText","sProperty","For_RowCellClick")
+'Link
+f.Intrinsic.Control.CallSub(FormatBulk,"sInputColumns","File","sProperty","Link")
+f.Intrinsic.Control.CallSub(FormatBulk,"sInputColumns","Time","sProperty","Width","sWidth","90")
+f.Intrinsic.Control.CallSub(FormatBulk,"sInputColumns","File,SubText1,SubText2,SubText3,SubText4,SubText5","sProperty","Width","sWidth","70")
+
+Gui.Form.gs.ResumeLayout()
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Format_Grids_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Parse_Trace.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Format_Grids.End
+
+Program.Sub.FormatBulk.Start
+F.Intrinsic.Control.Try
+V.Local..BulkDeclareString(sError,sColumns,sHold)
+v.Local..BulkDeclareLong(iCnt)
+
+f.Intrinsic.String.Split(v.Args.sInputColumns,",",v.Local.sColumns)
+
+f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sColumns.UBound,1)
+
+	F.Intrinsic.Control.SelectCase(v.Args.sProperty)
+		F.Intrinsic.Control.Case("Width")
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"MinWidth",v.Args.sWidth)
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"MaxWidth",v.Args.sWidth)	
+		F.Intrinsic.Control.Case("Invisible")
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"Visible",False)
+		F.Intrinsic.Control.Case("VisibleIndex")
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"VisibleIndex",v.Local.iCnt)
+		F.Intrinsic.Control.Case("HeaderFontBold")
+			Gui.Form.gs.SetColumnProperty("GV",V.Local.sColumns(V.Local.iCnt),"HeaderFontBold",True)
+		F.Intrinsic.Control.Case("HeaderBackColor")
+			Gui.Form.gs.SetColumnProperty("GV",V.Local.sColumns(V.Local.iCnt),"HeaderBackColor",v.Color.PRI-gs-01)
+		F.Intrinsic.Control.Case("DisplayNumeric")
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"DisplayCustomNumeric","#,###,###,##0.0000")
+		F.Intrinsic.Control.Case("Caption")
+			f.Intrinsic.String.Split(v.Local.sColumns(v.Local.iCnt),"@!@",v.Local.sHold)
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sHold(0),"Caption",v.Local.sHold(1))
+		F.Intrinsic.Control.Case("HeaderAllign_Far")
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"HeaderHAlignment","Far")
+		F.Intrinsic.Control.Case("Editable")		
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"AllowEdit","True")
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"ReadOnly","False")
+		F.Intrinsic.Control.Case("For_RowCellClick")
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"AllowEdit","False")
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"ReadOnly","True")			
+		f.Intrinsic.Control.Case("Link")
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"CellForeColor","Blue")
+			gui.Form.gs.SetColumnProperty("GV",v.Local.sColumns(v.Local.iCnt),"CellFontUnderline","True")
+	F.Intrinsic.Control.EndSelect	
+	
+f.Intrinsic.Control.Next(v.Local.iCnt)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)	
+F.Intrinsic.Control.EndTry
+Program.Sub.FormatBulk.End
+
+Program.Sub.gs_RowCellClick.Start
+F.Intrinsic.Control.SetErrorHandler("cmdOK_Click_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sSQL,sFile,sRet)
+v.Local.iCnt.Declare(long)
+
+f.Intrinsic.Control.If(v.Args.Column,=,"File")
+	v.Local.sFile.Set(v.DataTable.D(v.Args.RowIndex).File!FieldValTrim)
+	f.Intrinsic.String.Build("select Xf$Name as Table_Name from X$File where Xf$Loc like '%{0}%'",v.Local.sFile,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+	f.Intrinsic.String.Split(v.Local.sRet,"#$#",v.Local.sRet)
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sRet.UBound,1)
+		f.Data.DataTable.AddRow("DB","TableName",v.Local.sRet(v.Local.iCnt))
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Args.Column,=,"FullText")
+	gui.Text.txtFullText.Text(v.DataTable.D(v.Args.RowIndex).FullText!FieldValString)
+	gui.Text..Show
+f.Intrinsic.Control.EndIf
+
+gui.Form.gsTables.AddGridviewFromDatatable("GVDB","DB")
+gui.Form.gsTables.MainView("GVDB")
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdOK_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Parse_Trace.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.gs_RowCellClick.End
+
+Program.Sub.cmdCheck_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Form_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sTables,sSQL,sColumns,sCol_Datatype,sDatatype,sRet,sMsg,sTablesFields,sSingleQuotationMarkHolder,sSQL2)
+v.Local..BulkDeclareLong(iCnt,iCol,iProgress)
+v.Local..BulkDeclareBoolean(b,bNumeric)
+
+f.Data.DataTable.Close("DBF")
+f.Data.DataTable.Create("DBF",True)
+f.Data.DataTable.AddColumn("DBF","Table","string","")
+f.Data.DataTable.AddColumn("DBF","Field","string","")
+
+gui.Form.gsTablesFields.AddGridviewFromDatatable("GVDBF","DBF")
+gui.Form.gsTablesFields.MainView("GVDBF")
+
+gui.Form.proBar.Visible(True)
+
+gui.Form.proBar.Max(v.DataTable.DB.RowCount)
+f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.DB.RowCount--,1)
+	gui.Form.proBar.Value(v.Local.iCnt)
+	f.Intrinsic.String.Build("Select ltrim(rtrim(XE$Name)) as Columns,F2.Xe$DataType as DataType from X$File F1 Inner Join X$Field F2 On F2.XE$File = F1.XF$ID where F1.Xf$Name = '{0}' and F2.Xe$DataType <> 255",v.DataTable.DB(v.Local.iCnt).TableName!FieldValString,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sColumns)
+	
+	f.Intrinsic.Control.If(v.Local.sColumns,<>,"")
+		f.Intrinsic.String.Split(v.Local.sColumns,"#$#",v.Local.sColumns)
+		f.Intrinsic.Control.For(v.Local.iCol,0,v.Local.sColumns.UBound,1)
+		
+			v.Local.sSQL.Set("")			
+			f.Intrinsic.String.Split(v.Local.sColumns(v.Local.iCol),"*!*",v.Local.sCol_Datatype)
+			f.Intrinsic.String.Build("*{0}*",v.Local.sCol_Datatype(1),v.Local.sDatatype)
+			f.Intrinsic.String.IsInString("*0*CHAR*11*VARCHAR*21*LONGVARCHAR*25*NCHAR*26*NVARCHAR*30*DATETIME*",v.Local.sDatatype,True,v.Local.b)
+			f.Intrinsic.Control.If(v.Local.b,=,True)
+				
+				F.Intrinsic.Control.If(V.Screen.Form!chkLike.Value,=,1)
+					f.Intrinsic.String.Build("Select {0} from {1} where {0} like '%{2}%'",v.Local.sCol_Datatype(0),v.DataTable.DB(v.Local.iCnt).TableName!FieldValString,v.Screen.Form!txtValue.Text,v.Local.sSQL)
+				F.Intrinsic.Control.Else
+					f.Intrinsic.String.Build("Select {0} from {1} where {0} = '{2}'",v.Local.sCol_Datatype(0),v.DataTable.DB(v.Local.iCnt).TableName!FieldValString,v.Screen.Form!txtValue.Text,v.Local.sSQL)
+				F.Intrinsic.Control.EndIf
+				
+			f.Intrinsic.Control.Else			
+				f.Intrinsic.String.IsInString("*4*TIME*3*DATE*",v.Local.sDatatype,True,v.Local.b)
+				f.Intrinsic.Control.If(v.Local.b,=,False)			
+					f.Intrinsic.Math.IsNumeric(v.Screen.Form!txtValue.Text,v.Local.bNumeric)
+					f.Intrinsic.Control.If(v.Local.bNumeric,=,True)					
+						f.Intrinsic.String.Build("Select {0} from {1} where {0} = {2}",v.Local.sCol_Datatype(0),v.DataTable.DB(v.Local.iCnt).TableName!FieldValString,v.Screen.Form!txtValue.Text,v.Local.sSQL)
+					f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.EndIf
+			f.Intrinsic.Control.EndIf
+						
+			f.Intrinsic.Control.If(v.Local.sSQL,<>,"")
+				f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+				f.Intrinsic.Control.If(v.Local.sRet,<>,"")
+					f.Data.DataTable.AddRow("DBF","Table",v.DataTable.DB(v.Local.iCnt).TableName!FieldValString,"Field",v.Local.sCol_Datatype(0))
+					
+				f.Intrinsic.Control.EndIf
+			f.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.Control.Label("MoveNext")	
+		f.Intrinsic.Control.Next(v.Local.iCol)
+		
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Next(v.Local.iCnt)
+
+gui.Form.proBar.Visible(False)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Form_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Parse_Trace.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	f.Intrinsic.Control.GoTo("MoveNext")
+Function.Intrinsic.Control.EndIf
+
+'gui.Form.proBar.Visible(True)
+
+'gui.Form.proBar.Max(v.DataTable.DB.RowCount)
+'f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.DB.RowCount--,1)	
+'	gui.Form.proBar.Value(v.Local.iCnt)	
+'	f.Intrinsic.String.Build("Select ltrim(rtrim(XE$Name)) as Columns,F2.Xe$DataType as DataType,XE$FLAGS as Flag,Xe$Size as DTSize from X$File F1 Inner Join X$Field F2 On F2.XE$File = F1.XF$ID where F1.Xf$Name = '{0}' and F2.Xe$DataType not in (10,12,13,22,23,24,27,227,255)",v.DataTable.DB(v.Local.iCnt).TableName!FieldValString,v.Local.sSQL2)	
+'	
+'	F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",v.Local.sSQL2)
+'	F.Intrinsic.Control.DoUntil(V.ODBC.conx!rst.EOF,=,True)
+'	
+'		f.Intrinsic.String.Build("Select {0} from {1} where {0} = #SQMHolder{2}#SQMHolder",V.ODBC.conX!rst.FieldValString!columns,v.DataTable.DB(v.Local.iCnt).TableName!FieldValString,v.Screen.Form!txtValue.Text,v.Local.sSQL)
+'		
+'		F.Intrinsic.Control.SelectCase(V.ODBC.conX!rst.FieldValLong!DataType)
+'			'CHAR,BINARY
+'			F.Intrinsic.Control.CaseAny(0)
+'				F.Intrinsic.Control.SelectCase(V.ODBC.conX!rst.FieldValString!FLAG)
+'					F.Intrinsic.Control.CaseAny("4100","4096")
+'						Function.ODBC.conx!rst.Movenext
+'						'v.Local.sSingleQuotationMarkHolder.Set("")
+'					f.Intrinsic.Control.CaseElse
+'						v.Local.sSingleQuotationMarkHolder.Set("'")
+'				F.Intrinsic.Control.EndSelect
+'		
+'			'Number
+'			F.Intrinsic.Control.CaseAny(1,2,5,8,9,14,17,18,28,29,31)
+'				v.Local.sSingleQuotationMarkHolder.Set("")
+'			'Time,Date
+'			F.Intrinsic.Control.CaseAny(3,4)
+'				Function.ODBC.conx!rst.Movenext
+'				'v.Local.sSingleQuotationMarkHolder.Set("'")
+'			'Bit	
+'			F.Intrinsic.Control.CaseAny(7,16)	
+'				v.Local.sSingleQuotationMarkHolder.Set("")
+'			'Identity
+'			F.Intrinsic.Control.CaseAny(15)	
+'				v.Local.sSingleQuotationMarkHolder.Set("")
+'				
+'			'11Varchar*!*25*NCHAR*26*NVARCHAR*30*DATETIME
+'			F.Intrinsic.Control.CaseAny(11,25,26,30)
+'				v.Local.sSingleQuotationMarkHolder.Set("'")
+'				
+'			F.Intrinsic.Control.CaseAny(21)
+'				F.Intrinsic.Control.SelectCase(V.ODBC.conX!rst.FieldValString!FLAG)
+'					'LongBinary
+'					F.Intrinsic.Control.CaseAny("4100","2052")
+'						Function.ODBC.conx!rst.Movenext
+'						'v.Local.sSingleQuotationMarkHolder.Set("")
+'					f.Intrinsic.Control.CaseElse
+'						v.Local.sSingleQuotationMarkHolder.Set("'")
+'				F.Intrinsic.Control.EndSelect
+'			
+'			'Money
+'			F.Intrinsic.Control.CaseAny(6)
+'				Function.ODBC.conx!rst.Movenext
+'			'Currency
+'			F.Intrinsic.Control.CaseAny(19)
+'				Function.ODBC.conx!rst.Movenext
+'			'TimeStamp
+'			F.Intrinsic.Control.CaseAny(20)
+'				Function.ODBC.conx!rst.Movenext
+'			'Else	
+'			F.Intrinsic.Control.CaseElse
+'				Function.ODBC.conx!rst.Movenext
+'			
+'		F.Intrinsic.Control.EndSelect
+
+'		f.Intrinsic.String.Replace(v.Local.sSQL,"#SQMHolder",v.Local.sSingleQuotationMarkHolder,v.Local.sSQL)
+'		f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+'		f.Intrinsic.Control.If(v.Local.sRet,<>,"")
+'			f.Data.DataTable.AddRow("DBF","Table",v.DataTable.DB(v.Local.iCnt).TableName!FieldValString,"Field",V.ODBC.conX!rst.FieldValString!Columns)
+'			
+'		f.Intrinsic.Control.EndIf			
+'		F.Intrinsic.Control.Label("MoveNext_Error")
+'		Function.ODBC.conx!rst.Movenext
+'	f.Intrinsic.Control.Loop	
+	
+'f.Intrinsic.Control.Next(v.Local.iCnt)
+
+'gui.Form.proBar.Visible(False)
+
+Program.Sub.cmdCheck_Click.End
+
+Program.Sub.cmdFindAllTable_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdCheck_Click_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sFilter,sRet,sSQL)
+v.Local..BulkDeclareLong(iCnt,iTable)
+
+f.Intrinsic.UI.InvokeWaitDialog("Processing...")
+f.Intrinsic.Control.If(v.Screen.Form!chk1.Value,=,1)
+	v.Local.sFilter.Set("SubText1 <> ''")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!chk2.Value,=,1)
+	f.Intrinsic.Control.if(v.Local.sFilter,<>,"")
+		f.Intrinsic.String.Build("{0} or SubText2 <> ''",v.Local.sFilter,v.Local.sFilter)
+	f.Intrinsic.Control.Else
+		v.Local.sFilter.Set("SubText2 <> ''")	
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!chk3.Value,=,1)
+	f.Intrinsic.Control.if(v.Local.sFilter,<>,"")
+		f.Intrinsic.String.Build("{0} or SubText3 <> ''",v.Local.sFilter,v.Local.sFilter)
+	f.Intrinsic.Control.Else
+		v.Local.sFilter.Set("SubText3 <> ''")	
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!chk4.Value,=,1)
+	f.Intrinsic.Control.if(v.Local.sFilter,<>,"")
+		f.Intrinsic.String.Build("{0} or SubText4 <> ''",v.Local.sFilter,v.Local.sFilter)
+	f.Intrinsic.Control.Else
+		v.Local.sFilter.Set("SubText4 <> ''")	
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!chk5.Value,=,1)
+	f.Intrinsic.Control.if(v.Local.sFilter,<>,"")
+		f.Intrinsic.String.Build("{0} or SubText5 <> ''",v.Local.sFilter,v.Local.sFilter)
+	f.Intrinsic.Control.Else
+		v.Local.sFilter.Set("SubText5 <> ''")	
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!chkAll.Value,=,1)
+	v.Local.sFilter.Set("")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(V.DataView.D!DV.Exists,=,True)
+	f.Data.DataView.Close("D","DV")
+f.Intrinsic.Control.EndIf
+
+
+f.Data.DataView.Create("D","DV")
+f.Data.DataView.SetFilter("D","DV",v.Local.sFilter)
+
+f.Intrinsic.Control.If(v.DataTable.D_ToSave.Exists,=,True)
+	f.Data.DataTable.Close("D_ToSave")
+f.Intrinsic.Control.EndIf
+
+f.Data.DataView.ToDataTable("D","DV","D_ToSave",True)
+f.ODBC.Connection!conx.Execute("Delete from GCG_Files")
+f.Data.DataTable.SaveToDB("D_ToSave","conx","GCG_Files","",128,"File@!@File")
+
+f.Intrinsic.Control.If(v.DataTable.DBFile.Exists,=,True)
+	f.Data.DataTable.Close("DBFile")
+f.Intrinsic.Control.EndIf
+
+f.Data.DataTable.CreateFromSQL("DBFile","conx","Select distinct ltrim(rtrim(File)) as File from GCG_Files",True)
+f.Intrinsic.Control.CallSub(create_db)
+
+f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.DBFile.RowCount--,1)
+
+	f.Intrinsic.String.Build("select Xf$Name as Table_Name from X$File where Xf$Loc like '%{0}%'",v.DataTable.DBFile(v.Local.iCnt).File!FieldValTrim,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+	f.Intrinsic.String.Split(v.Local.sRet,"#$#",v.Local.sRet)
+	f.Intrinsic.Control.For(v.Local.iTable,0,v.Local.sRet.UBound,1)
+		f.Data.DataTable.AddRow("DB","TableName",v.Local.sRet(v.Local.iTable))
+	f.Intrinsic.Control.Next(v.Local.iTable)
+f.Intrinsic.Control.Next(v.Local.iCnt)
+
+gui.Form.gsTables.AddGridviewFromDatatable("GVDB","DB")
+gui.Form.gsTables.MainView("GVDB")
+
+gui.Form.gsFile.AddGridviewFromDatatable("GVDBFile","DBFile")
+gui.Form.gsFile.MainView("GVDBFile")
+'rowcell click
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","AllowEdit","False")
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","ReadOnly","True")
+'Link
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","CellForeColor","Blue")
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","CellFontUnderline","True")
+
+f.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdCheck_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Parse_Trace.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdFindAllTable_Click.End
+
+Program.Sub.Check_Custom_Table.Start
+f.Intrinsic.Control.Try
+
+v.Local..BulkDeclareString(sError)
+v.Local.bExist.Declare(boolean)
+Function.ODBC.Connection!conx.TableExists("GCG_Files", v.Local.bExist)
+f.Intrinsic.Control.If(v.Local.bExist,=,false)
+	f.Intrinsic.UI.InvokeWaitDialog("Creating Custom Table...")
+	f.ODBC.Connection!conx.Execute("CREATE TABLE GCG_Files( AutoNum IDENTITY DEFAULT '0', File CHAR(100), UNIQUE (AutoNum));")
+	f.Intrinsic.UI.CloseWaitDialog
+f.Intrinsic.Control.Endif
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)	
+F.Intrinsic.Control.EndTry
+Program.Sub.Check_Custom_Table.End
+
+Program.Sub.Text_UnLoad.Start
+gui.Text..Visible(False)
+Program.Sub.Text_UnLoad.End
+
+Program.Sub.gsFile_RowCellClick.Start
+v.Local..BulkDeclareString(sError,sSQL,sFile,sRet)
+v.Local.iCnt.Declare(long)
+
+f.Intrinsic.Control.If(v.Args.Column,=,"File")
+	v.Local.sFile.Set(v.DataTable.DBFile(v.Args.RowIndex).File!FieldValTrim)
+	f.Intrinsic.String.Build("select Xf$Name as Table_Name from X$File where Xf$Loc like '%{0}%'",v.Local.sFile,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+	f.Intrinsic.String.Split(v.Local.sRet,"#$#",v.Local.sRet)
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sRet.UBound,1)
+		f.Data.DataTable.AddRow("DB","TableName",v.Local.sRet(v.Local.iCnt))
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+f.Intrinsic.Control.EndIf
+Program.Sub.gsFile_RowCellClick.End
+
+Program.Sub.cmdAddFile_Click.Start
+v.Local..BulkDeclareString(sFiles)
+v.Local.iCnt.Declare(long)
+f.Intrinsic.String.Split(v.Screen.Form!txtAddFile.Text.Trim,",",v.Local.sFiles)
+f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sFiles.UBound,1)
+	f.Data.DataTable.AddRow("DBFile","File",v.Local.sFiles(v.Local.iCnt))
+f.Intrinsic.Control.Next(v.Local.iCnt)
+Program.Sub.cmdAddFile_Click.End
+
+Program.Sub.cmdAddTable_Click.Start
+v.Local..BulkDeclareString(sTables)
+v.Local.iCnt.Declare(long)
+f.Intrinsic.String.Split(v.Screen.Form!txtAddTable.Text.Trim,",",v.Local.sTables)
+f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sTables.UBound,1)
+	f.Data.DataTable.AddRow("DB","TableName",v.Local.sTables(v.Local.iCnt))
+f.Intrinsic.Control.Next(v.Local.iCnt)
+Program.Sub.cmdAddTable_Click.End
+
+Program.Sub.cmdStartTrace_Click.Start
+'v.Global.dStart.Set(v.Ambient.Now)
+gui.Form.lblStartTime.Text(v.Ambient.Now)
+
+Program.Sub.cmdStartTrace_Click.End
+
+Program.Sub.cmdCompare_Click.Start
+v.Local.d.Declare(Date)
+F.Intrinsic.File.GetFileDateTime ("C:\Users\bnguyen\Desktop\Archieve\FindFields\DEV\B_FIELD_NOTES.sql",v.Local.d)
+v.Global.dStart.Set(v.Screen.Form!lblStartTime.Text.Trim)
+f.Intrinsic.Control.If(v.Global.dStart,<,v.Local.d)
+
+f.Intrinsic.UI.Msgbox("less")
+f.Intrinsic.Control.EndIf
+Program.Sub.cmdCompare_Click.End
+
+Program.Sub.cmdPullFileAfterTime_Click.Start
+v.Local..BulkDeclareString(sError,sSQL,sRet,sFileName)
+
+V.Local.iCnt.Declare(long)
+v.Local.iCnt2.Declare(long)
+v.Local.sHold.Declare(string)
+v.Local.sFile.Declare(string)
+v.Local.sPrefixFolder.Declare(string)
+v.Local..BulkDeclareDate(d,dnow)
+v.Local.dNow.Set(v.Screen.Form!lblStartTime.Text)
+
+f.Intrinsic.Control.If(v.DataTable.DBFile.Exists,=,True)
+	f.Data.DataTable.Close("DBFile")
+f.Intrinsic.Control.EndIf
+
+f.Data.DataTable.CreateFromSQL("DBFile","conx","select Xf$Loc as File  from X$File",True)
+
+f.Intrinsic.Control.If(v.DataTable.DBFile.RowCount,=,0)
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+gui.Form.proBar.Visible(True)
+gui.Form.proBar.Max(v.DataTable.DBFile.RowCount)
+
+f.Intrinsic.Control.For(v.Local.iCnt,v.DataTable.DBFile.RowCount--,0,-1)
+	gui.Form.proBar.Value(v.Local.iCnt)
+	
+	v.Local.sHold.Set(v.DataTable.DBFile(v.Local.iCnt).File!FieldValString)
+	f.Intrinsic.Control.If(v.Global.PDSN,=,"GLOBAL_COMMON")
+		f.Intrinsic.String.Build("{0}\DDF\COMMON",v.Caller.GlobalDir,v.Local.sPrefixFolder)
+	f.Intrinsic.Control.else
+		f.Intrinsic.Control.If(v.Local.sHold.left12,=,"..\..\FILES\")
+			v.Local.sPrefixFolder.Set(v.Caller.FilesDir)
+			f.Intrinsic.String.Replace(v.DataTable.DBFile(v.Local.iCnt).File!FieldValString,"..\..\FILES\","",V.Local.sFileName)
+			f.Data.DataTable.SetValue("DBFile",v.Local.iCnt,"File",v.Local.sFileName)			
+		f.Intrinsic.Control.Else
+			v.Local.sPrefixFolder.Set(v.Caller.DDFDir)
+		f.Intrinsic.Control.EndIf	
+	f.Intrinsic.Control.EndIf
+
+	
+	f.Intrinsic.String.Build("{0}\{1}",v.Local.sPrefixFolder,v.DataTable.DBFile(v.Local.iCnt).File!FieldValString,v.Local.sFile)
+	F.Intrinsic.File.GetFileDateTime (v.Local.sFile,v.Local.d)
+	f.Intrinsic.Control.If(v.Local.dNow,>,v.Local.d)
+		f.Data.DataTable.DeleteRow("DBFile",v.Local.iCnt)
+	f.Intrinsic.Control.Else
+	
+		'Add Table Name		
+'			
+'		f.Intrinsic.String.Build("select Xf$Name as Table_Name from X$File where Xf$Loc like '%{0}%'",v.DataTable.DBFile(v.Local.iCnt).File!FieldValTrim,v.Local.sSQL)
+'		f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+'		f.Intrinsic.String.Split(v.Local.sRet,"#$#",v.Local.sRet)
+'		f.Intrinsic.Control.For(v.Local.iCnt2,0,v.Local.sRet.UBound,1)
+'			f.Data.DataTable.AddRow("DB","TableName",v.Local.sRet(v.Local.iCnt2))
+'		f.Intrinsic.Control.Next(v.Local.iCnt2)		
+		
+	f.Intrinsic.Control.Endif
+	
+f.Intrinsic.Control.Next(v.Local.iCnt)
+
+
+'Index
+'Close then create DBFile_DV
+f.Intrinsic.Control.If(V.DataView.DBFile!DBFile_DV.Exists,=,true)
+	Function.Data.DataView.Close("DBFile", "DBFile_DV")
+f.Intrinsic.Control.endif
+Function.Data.DataView.Create("DBFile","DBFile_DV",22,"","")
+'Close then create DBFile2
+f.Intrinsic.Control.If(v.DataTable.DBFile2.Exists,=,true)	
+	Function.Data.DataTable.Close("DBFile2")
+f.Intrinsic.Control.endif
+Function.Data.DataView.ToDataTable("DBFile","DBFile_DV", "DBFile2", true)
+'Close then create DBFile_DV2
+f.Intrinsic.Control.If(V.DataView.DBFile2!DBFile_DV2.Exists,=,true)	
+	Function.Data.DataView.Close("DBFile2", "DBFile_DV2")
+f.Intrinsic.Control.endif
+F.Data.DataView.Create("DBFile2", "DBFile_DV2", 22,"","")
+'Close then create DBFile	
+f.Data.DataTable.Close("DBFile")
+F.Data.DataView.ToDataTableDistinct("DBFile2","DBFile_DV2", "DBFile","File",true)
+
+
+gui.Form.gsFile.AddGridviewFromDatatable("GVDBFile","DBFile")
+gui.Form.gsFile.MainView("GVDBFile")
+'rowcell click
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","AllowEdit","False")
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","ReadOnly","True")
+'Link
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","CellForeColor","Blue")
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","CellFontUnderline","True")
+
+'Add Table Name	
+f.Intrinsic.Control.If(v.DataTable.DBFile.RowCount,>,0)
+	gui.Form.proBar.Max(v.DataTable.DBFile.RowCount)
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.For(v.Local.iCnt,v.DataTable.DBFile.RowCount--,0,-1)
+	gui.Form.proBar.Value(v.Local.iCnt)	
+	'Add Table Name					
+	f.Intrinsic.String.Build("select Xf$Name as Table_Name from X$File where Xf$Loc like '%{0}%'",v.DataTable.DBFile(v.Local.iCnt).File!FieldValTrim,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+	f.Intrinsic.String.Split(v.Local.sRet,"#$#",v.Local.sRet)
+	f.Intrinsic.Control.For(v.Local.iCnt2,0,v.Local.sRet.UBound,1)
+		f.Data.DataTable.AddRow("DB","TableName",v.Local.sRet(v.Local.iCnt2))
+	f.Intrinsic.Control.Next(v.Local.iCnt2)		
+	
+f.Intrinsic.Control.Next(v.Local.iCnt)
+
+
+gui.Form.proBar.Visible(False)
+Program.Sub.cmdPullFileAfterTime_Click.End
+
+Program.Sub.cmdPullAllFile_Click.Start
+V.Local.iCnt.Declare(long)
+v.Local.sHold.Declare(string)
+
+f.Intrinsic.Control.If(v.DataTable.DBFile.Exists,=,True)
+	f.Data.DataTable.Close("DBFile")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Global.PDSN,=,"GLOBAL_COMMON")
+	f.Data.DataTable.CreateFromSQL("DBFile","conx","select Xf$Loc as File  from X$File WHERE left( Xf$Loc,2) <> '..'",True)
+F.Intrinsic.Control.Else
+	f.Data.DataTable.CreateFromSQL("DBFile","conx","select Xf$Loc as File  from X$File WHERE left( Xf$Loc,2) = '..'",True)
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.DBFile.RowCount--,1)
+		f.Intrinsic.String.Replace(v.DataTable.DBFile(v.Local.iCnt).File!FieldValString,"..\..\FILES\","",V.Local.sHold)
+		f.Data.DataTable.SetValue("DBFile",v.Local.iCnt,"File",v.Local.sHold)
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+f.Intrinsic.Control.EndIf
+
+gui.Form.gsFile.AddGridviewFromDatatable("GVDBFile","DBFile")
+gui.Form.gsFile.MainView("GVDBFile")
+'rowcell click
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","AllowEdit","False")
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","ReadOnly","True")
+'Link
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","CellForeColor","Blue")
+gui.Form.gsFile.SetColumnProperty("GVDBFile","File","CellFontUnderline","True")
+
+
+Program.Sub.cmdPullAllFile_Click.End
+
+Program.Sub.Form_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("Form_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+f.ODBC.Connection!conx.Close
+f.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Form_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Form_UnLoad.End
+
+Program.Sub.cmdWrappup_Click.Start
+Program.Sub.cmdWrappup_Click.End
