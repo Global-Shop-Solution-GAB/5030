@@ -1,0 +1,2153 @@
+Program.Sub.ScreenSU.Start
+Gui.Form..Create
+Gui.Form..Size(20715,14700)
+Gui.Form..MinX(0)
+Gui.Form..MinY(0)
+Gui.Form..Position(0,0)
+Gui.Form..BackColor(-2147483633)
+Gui.Form..MousePointer(0)
+Gui.Form..Event(UnLoad,Form_UnLoad)
+Gui.Form..Caption("Custom Kit")
+Gui.Form.tab1.Create(Tab)
+Gui.Form.tab1.Size(20205,13785)
+Gui.Form.tab1.Position(30,390)
+Gui.Form.tab1.Tabs(9)
+Gui.Form.tab1.SetTab(0)
+Gui.Form.tab1.Caption("Files & Fields")
+Gui.Form.tab1.SetTab(1)
+Gui.Form.tab1.Caption("Program")
+Gui.Form.tab1.SetTab(2)
+Gui.Form.tab1.Caption("Hook")
+Gui.Form.tab1.SetTab(3)
+Gui.Form.tab1.Caption("Hook Association")
+Gui.Form.tab1.SetTab(4)
+Gui.Form.tab1.Caption("Hook Maintenance Log")
+Gui.Form.tab1.SetTab(5)
+Gui.Form.tab1.Caption("BI Report")
+Gui.Form.tab1.SetTab(6)
+Gui.Form.tab1.Caption("Data Visual.")
+Gui.Form.tab1.SetTab(7)
+Gui.Form.tab1.Caption("String")
+Gui.Form.tab1.SetTab(8)
+Gui.Form.tab1.Caption("Help")
+Gui.Form.lbl3.Create(Label,"File Name",True,1380,255,0,1200,360,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl3.Parent("tab1",0)
+Gui.Form.txtFileName.Create(TextBox,"",True,1440,300,0,1185,555,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtFileName.Parent("tab1",0)
+Gui.Form.cmdFilenFieldClearFileName.Create(Button)
+Gui.Form.cmdFilenFieldClearFileName.Size(675,330)
+Gui.Form.cmdFilenFieldClearFileName.Position(2745,540)
+Gui.Form.cmdFilenFieldClearFileName.Parent("tab1",0)
+Gui.Form.cmdFilenFieldClearFileName.Caption("Clear")
+Gui.Form.cmdFilenFieldClearFileName.Event(Click,cmdFilenFieldClearFileName_Click)
+Gui.Form.txtFileTable.Create(TextBox,"",True,1410,300,0,1185,1230,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtFileTable.Parent("tab1",0)
+Gui.Form.lbl42.Create(Label,"Table Name",True,1380,255,0,1185,1020,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl42.Parent("tab1",0)
+Gui.Form.cmdFilenFieldClearFieldFileTableName.Create(Button)
+Gui.Form.cmdFilenFieldClearFieldFileTableName.Size(675,330)
+Gui.Form.cmdFilenFieldClearFieldFileTableName.Position(2745,1215)
+Gui.Form.cmdFilenFieldClearFieldFileTableName.Parent("tab1",0)
+Gui.Form.cmdFilenFieldClearFieldFileTableName.Caption("Clear")
+Gui.Form.cmdFilenFieldClearFieldFileTableName.Event(Click,cmdFilenFieldClearFieldFileTableName_Click)
+Gui.Form.cmdFilterFilesTables.Create(Button)
+Gui.Form.cmdFilterFilesTables.Size(855,375)
+Gui.Form.cmdFilterFilesTables.Position(3690,540)
+Gui.Form.cmdFilterFilesTables.Caption("Find")
+Gui.Form.cmdFilterFilesTables.Event(Click,cmdFilterFilesTables_Click)
+Gui.Form.cmdFilterFilesTables.Parent("tab1",0)
+Gui.Form.cmdFilterFilesTables.BackColor(15128749)
+Gui.Form.lblTableName.Create(Label,"Table Name",True,1935,255,0,7140,360,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblTableName.Parent("tab1",0)
+Gui.Form.txtTable.Create(TextBox,"",True,2970,300,0,7140,555,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtTable.Parent("tab1",0)
+Gui.Form.cmdFilenFieldClearTableName.Create(Button)
+Gui.Form.cmdFilenFieldClearTableName.Size(675,330)
+Gui.Form.cmdFilenFieldClearTableName.Position(10245,540)
+Gui.Form.cmdFilenFieldClearTableName.Parent("tab1",0)
+Gui.Form.cmdFilenFieldClearTableName.Caption("Clear")
+Gui.Form.cmdFilenFieldClearTableName.Event(Click,cmdFilenFieldClearTableName_Click)
+Gui.Form.lbl2.Create(Label,"Field Name",True,1935,255,0,7140,1020,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl2.Parent("tab1",0)
+Gui.Form.txtField.Create(TextBox,"",True,2970,300,0,7140,1230,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtField.Parent("tab1",0)
+Gui.Form.cmdFilenFieldClearFieldName.Create(Button)
+Gui.Form.cmdFilenFieldClearFieldName.Size(675,330)
+Gui.Form.cmdFilenFieldClearFieldName.Position(10245,1230)
+Gui.Form.cmdFilenFieldClearFieldName.Parent("tab1",0)
+Gui.Form.cmdFilenFieldClearFieldName.Caption("Clear")
+Gui.Form.cmdFilenFieldClearFieldName.Event(Click,cmdFilenFieldClearFieldName_Click)
+Gui.Form.cmdFilterTableField.Create(Button)
+Gui.Form.cmdFilterTableField.Size(855,375)
+Gui.Form.cmdFilterTableField.Position(11250,540)
+Gui.Form.cmdFilterTableField.Caption("Find")
+Gui.Form.cmdFilterTableField.Event(Click,Click_Filter_FindNFields)
+Gui.Form.cmdFilterTableField.Parent("tab1",0)
+Gui.Form.cmdFilterTableField.BackColor(15128749)
+Gui.Form.gs.Create(GsGridControl)
+Gui.Form.gs.Size(13830,11400)
+Gui.Form.gs.Position(6120,1980)
+Gui.Form.gs.Parent("tab1",0)
+Gui.Form.gs.Event(CellValueChanged,gs_CellValueChanged)
+Gui.Form.gsFilesTables.Create(GsGridControl)
+Gui.Form.gsFilesTables.Size(5430,11370)
+Gui.Form.gsFilesTables.Position(165,1980)
+Gui.Form.gsFilesTables.Parent("tab1",0)
+Gui.Form.gsDataVisual.Create(GsGridControl)
+Gui.Form.gsDataVisual.Size(19860,8445)
+Gui.Form.gsDataVisual.Position(90,4890)
+Gui.Form.gsDataVisual.Parent("tab1",6)
+Gui.Form.gsDataVisual.Event(RowCellClick,gsDataVisual_RowCellClick)
+Gui.Form.lbl4.Create(Label,"Select",True,645,255,0,90,135,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl4.Parent("tab1",6)
+Gui.Form.lbl5.Create(Label,"From",True,525,255,0,105,1530,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl5.Parent("tab1",6)
+Gui.Form.txtSelect.Create(TextBoxR)
+Gui.Form.txtSelect.Size(10620,1110)
+Gui.Form.txtSelect.Position(120,345)
+Gui.Form.txtSelect.Parent("tab1",6)
+Gui.Form.txtFrom.Create(TextBoxR)
+Gui.Form.txtFrom.Size(10605,750)
+Gui.Form.txtFrom.Position(135,1740)
+Gui.Form.txtFrom.Parent("tab1",6)
+Gui.Form.txtWhere.Create(TextBoxR)
+Gui.Form.txtWhere.Size(8895,660)
+Gui.Form.txtWhere.Position(11070,315)
+Gui.Form.txtWhere.Parent("tab1",6)
+Gui.Form.lbl6.Create(Label,"Where",True,630,255,0,11040,90,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl6.Parent("tab1",6)
+Gui.Form.txtGroupBy.Create(TextBoxR)
+Gui.Form.txtGroupBy.Size(8895,465)
+Gui.Form.txtGroupBy.Position(11070,1275)
+Gui.Form.txtGroupBy.Parent("tab1",6)
+Gui.Form.txtOrderBy.Create(TextBoxR)
+Gui.Form.txtOrderBy.Size(8895,450)
+Gui.Form.txtOrderBy.Position(11070,2040)
+Gui.Form.txtOrderBy.Parent("tab1",6)
+Gui.Form.lbl7.Create(Label,"Group by",True,780,255,0,11025,1050,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl7.Parent("tab1",6)
+Gui.Form.lbl8.Create(Label,"Order by",True,780,255,0,11025,1815,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl8.Parent("tab1",6)
+Gui.Form.cmdOK.Create(Button)
+Gui.Form.cmdOK.Size(855,375)
+Gui.Form.cmdOK.Position(120,2520)
+Gui.Form.cmdOK.Caption("Run SQL")
+Gui.Form.cmdOK.Event(Click,cmdOK_Click)
+Gui.Form.cmdOK.Parent("tab1",6)
+Gui.Form.cmdOK.BackColor(15128749)
+Gui.Form.cmdClearSQL.Create(Button)
+Gui.Form.cmdClearSQL.Size(945,375)
+Gui.Form.cmdClearSQL.Position(1215,2520)
+Gui.Form.cmdClearSQL.Caption("Clear All")
+Gui.Form.cmdClearSQL.Event(Click,cmdClearSQL_Click)
+Gui.Form.cmdClearSQL.Parent("tab1",6)
+Gui.Form.chkGetColName.Create(CheckBox)
+Gui.Form.chkGetColName.Size(2565,240)
+Gui.Form.chkGetColName.Position(3870,3000)
+Gui.Form.chkGetColName.Caption("Get column names to Select")
+Gui.Form.chkGetColName.Parent("tab1",6)
+Gui.Form.txtMinWidth.Create(TextBox,"100",True,615,300,0,10110,2940,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtMinWidth.Parent("tab1",6)
+Gui.Form.chkSameColumnName.Create(CheckBox)
+Gui.Form.chkSameColumnName.Size(3930,360)
+Gui.Form.chkSameColumnName.Position(120,285)
+Gui.Form.chkSameColumnName.Parent("tab1",7)
+Gui.Form.chkSameColumnName.Caption("Same Column Name")
+Gui.Form.chkSameColumnName.Event(Click,chkSameColumnName_Click)
+Gui.Form.chkSameColumnName.Value(1)
+Gui.Form.txtSameColumnNames.Create(TextBoxR)
+Gui.Form.txtSameColumnNames.Size(6465,4125)
+Gui.Form.txtSameColumnNames.Position(120,660)
+Gui.Form.txtSameColumnNames.Parent("tab1",7)
+Gui.Form.txtSameColumnNames.Enabled(False)
+Gui.Form.cmdClearSameColumnNames.Create(Button)
+Gui.Form.cmdClearSameColumnNames.Size(855,375)
+Gui.Form.cmdClearSameColumnNames.Position(120,4875)
+Gui.Form.cmdClearSameColumnNames.Parent("tab1",7)
+Gui.Form.cmdClearSameColumnNames.Caption("Clear")
+Gui.Form.cmdClearSameColumnNames.Event(Click,cmdClearSameColumnNames_Click)
+Gui.Form.txtDTColumn.Create(TextBox,"",True,1800,300,0,120,5565,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtDTColumn.Parent("tab1",7)
+Gui.Form.txtDBColumn.Create(TextBox,"",True,1800,300,0,2220,5565,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtDBColumn.Parent("tab1",7)
+Gui.Form.cmdClearDifColNames.Create(Button)
+Gui.Form.cmdClearDifColNames.Size(855,375)
+Gui.Form.cmdClearDifColNames.Position(120,5880)
+Gui.Form.cmdClearDifColNames.Parent("tab1",7)
+Gui.Form.cmdClearDifColNames.Caption("Clear")
+Gui.Form.cmdClearDifColNames.Event(Click,cmdClearDifColNames_Click)
+Gui.Form.lbl9.Create(Label,"GAB DataTable Column",True,1935,255,0,120,5340,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl9.Parent("tab1",7)
+Gui.Form.lbl10.Create(Label,"DataBaseTable Column",True,1935,255,0,2190,5355,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl10.Parent("tab1",7)
+Gui.Form.cmdAddColumn.Create(Button)
+Gui.Form.cmdAddColumn.Size(855,375)
+Gui.Form.cmdAddColumn.Position(120,6330)
+Gui.Form.cmdAddColumn.Parent("tab1",7)
+Gui.Form.cmdAddColumn.Caption("Add")
+Gui.Form.cmdAddColumn.Event(Click,cmdAddColumn_Click)
+Gui.Form.cmdAddColumn.BackColor(15128749)
+Gui.Form.txtMap.Create(TextBoxR)
+Gui.Form.txtMap.Size(6420,5535)
+Gui.Form.txtMap.Position(120,6975)
+Gui.Form.txtMap.Parent("tab1",7)
+Gui.Form.cmdClear.Create(Button)
+Gui.Form.cmdClear.Size(855,375)
+Gui.Form.cmdClear.Position(120,12720)
+Gui.Form.cmdClear.Parent("tab1",7)
+Gui.Form.cmdClear.Caption("Clear")
+Gui.Form.cmdClear.Event(Click,cmdClear_Click)
+Gui.Form.lbl11.Create(Label,"Min Width",True,855,255,0,9225,3015,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl11.Parent("tab1",6)
+Gui.Form.gsMap.Create(GsGridControl)
+Gui.Form.gsMap.Size(8610,11865)
+Gui.Form.gsMap.Position(6765,600)
+Gui.Form.gsMap.Parent("tab1",7)
+Gui.Form.cmdClearGSMap.Create(Button)
+Gui.Form.cmdClearGSMap.Size(855,375)
+Gui.Form.cmdClearGSMap.Position(6930,12720)
+Gui.Form.cmdClearGSMap.Parent("tab1",7)
+Gui.Form.cmdClearGSMap.Caption("Clear")
+Gui.Form.cmdClearGSMap.Event(Click,cmdClearGSMap_Click)
+Gui.Form.txtHelp.Create(TextBoxR)
+Gui.Form.txtHelp.Size(19935,13155)
+Gui.Form.txtHelp.Position(90,135)
+Gui.Form.txtHelp.Parent("tab1",8)
+Gui.Form.txtHelp.Text("Custom Kit")
+Gui.Form.txtSQL.Create(TextBoxR)
+Gui.Form.txtSQL.Size(19830,1185)
+Gui.Form.txtSQL.Position(120,3255)
+Gui.Form.txtSQL.Parent("tab1",6)
+Gui.Form.lbl12.Create(Label,"SQL Statement",True,1305,255,0,135,3060,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl12.Parent("tab1",6)
+Gui.Form.frame1.Create(Frame)
+Gui.Form.frame1.Size(135,13785)
+Gui.Form.frame1.Position(5790,-120)
+Gui.Form.frame1.Parent("tab1",0)
+Gui.Form.frame2.Create(Frame)
+Gui.Form.frame2.Size(15,2100)
+Gui.Form.frame2.Position(12480,-105)
+Gui.Form.frame2.Parent("tab1",0)
+Gui.Form.frame3.Create(Frame)
+Gui.Form.frame3.Size(15,2100)
+Gui.Form.frame3.Position(17040,-105)
+Gui.Form.frame3.Parent("tab1",0)
+Gui.Form.lblFileRecords.Create(Label,"",True,900,255,0,4665,1725,True,4,"Arial",8,-2147483626,1)
+Gui.Form.lblFileRecords.Parent("tab1",0)
+Gui.Form.lblFileRecords.BorderStyle(2)
+Gui.Form.lblTableFieldRecords.Create(Label,"",True,675,255,0,19275,1725,True,4,"Arial",8,-2147483626,1)
+Gui.Form.lblTableFieldRecords.Parent("tab1",0)
+Gui.Form.lblTableFieldRecords.BorderStyle(2)
+Gui.Form.lbl13.Create(Label,"Rows",True,540,255,0,5040,1455,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl13.Parent("tab1",0)
+Gui.Form.lblSqlRecords.Create(Label,"",True,1335,255,0,18600,3030,True,4,"Arial",8,-2147483626,1)
+Gui.Form.lblSqlRecords.Parent("tab1",6)
+Gui.Form.lblSqlRecords.BorderStyle(2)
+Gui.Form.lbl14.Create(Label,"Rows",True,540,255,0,18045,3015,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl14.Parent("tab1",6)
+Gui.Form.frame4.Create(Frame)
+Gui.Form.frame4.Size(19800,15)
+Gui.Form.frame4.Position(135,2925)
+Gui.Form.frame4.Parent("tab1",6)
+Gui.Form.cmdRunSQL2.Create(Button)
+Gui.Form.cmdRunSQL2.Size(855,360)
+Gui.Form.cmdRunSQL2.Position(105,4485)
+Gui.Form.cmdRunSQL2.Parent("tab1",6)
+Gui.Form.cmdRunSQL2.Caption("Run SQL")
+Gui.Form.cmdRunSQL2.Event(Click,cmdRunSQL2_Click)
+Gui.Form.cmdRunSQL2.BackColor(15128749)
+Gui.Form.cmdClearSQL2.Create(Button)
+Gui.Form.cmdClearSQL2.Size(855,360)
+Gui.Form.cmdClearSQL2.Position(1215,4485)
+Gui.Form.cmdClearSQL2.Parent("tab1",6)
+Gui.Form.cmdClearSQL2.Caption("Clear")
+Gui.Form.cmdClearSQL2.Event(Click,cmdClearSQL2_Click)
+Gui.Form.lbl16.Create(Label,"Input String and get length",True,2310,255,0,15555,645,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl16.Parent("tab1",7)
+Gui.Form.lblLetterCount.Create(Label,"",True,495,255,0,19500,630,True,4,"Arial",8,-2147483626,0)
+Gui.Form.lblLetterCount.Parent("tab1",7)
+Gui.Form.lblLetterCount.BorderStyle(2)
+Gui.Form.lbl17.Create(Label,"Count",True,540,255,0,18915,630,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl17.Parent("tab1",7)
+Gui.Form.lbl18.Create(Label,"New Line",True,810,255,0,17580,1260,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl18.Parent("tab1",7)
+Gui.Form.lblNewLine.Create(Label,"",True,495,255,0,18405,1260,True,4,"Arial",8,-2147483626,0)
+Gui.Form.lblNewLine.Parent("tab1",7)
+Gui.Form.lblNewLine.BorderStyle(2)
+Gui.Form.txtString.Create(TextBox,"",True,4425,300,0,15570,870,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtString.Parent("tab1",7)
+Gui.Form.txtString.Event(Change,txtString_Change)
+Gui.Form.cmdClearString.Create(Button)
+Gui.Form.cmdClearString.Size(855,255)
+Gui.Form.cmdClearString.Position(15555,1215)
+Gui.Form.cmdClearString.Parent("tab1",7)
+Gui.Form.cmdClearString.Caption("Clear")
+Gui.Form.cmdClearString.FontSize(7)
+Gui.Form.cmdClearString.Event(Click,cmdClearString_Click)
+Gui.Form.txtStringBigBox.Create(TextBoxR)
+Gui.Form.txtStringBigBox.Size(4425,3765)
+Gui.Form.txtStringBigBox.Position(15570,1545)
+Gui.Form.txtStringBigBox.Parent("tab1",7)
+Gui.Form.cmdCountBigString.Create(Button)
+Gui.Form.cmdCountBigString.Size(855,375)
+Gui.Form.cmdCountBigString.Position(15555,5490)
+Gui.Form.cmdCountBigString.Parent("tab1",7)
+Gui.Form.cmdCountBigString.Caption("Count")
+Gui.Form.cmdCountBigString.Event(Click,cmdCountBigString_Click)
+Gui.Form.lbl19.Create(Label,"Count",True,540,255,0,18915,1260,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl19.Parent("tab1",7)
+Gui.Form.lblLetterCountBigString.Create(Label,"",True,495,255,0,19500,1260,True,4,"Arial",8,-2147483626,0)
+Gui.Form.lblLetterCountBigString.Parent("tab1",7)
+Gui.Form.lblLetterCountBigString.BorderStyle(2)
+Gui.Form.cmdClearBigString.Create(Button)
+Gui.Form.cmdClearBigString.Size(855,375)
+Gui.Form.cmdClearBigString.Position(16530,5490)
+Gui.Form.cmdClearBigString.Parent("tab1",7)
+Gui.Form.cmdClearBigString.Caption("Clear")
+Gui.Form.cmdClearBigString.Event(Click,cmdClearBigString_Click)
+Gui.Form.txtRptID.Create(TextBox,"",True,780,300,0,180,390,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtRptID.Parent("tab1",5)
+Gui.Form.cmdBIClearID.Create(Button)
+Gui.Form.cmdBIClearID.Size(675,330)
+Gui.Form.cmdBIClearID.Position(1035,375)
+Gui.Form.cmdBIClearID.Parent("tab1",5)
+Gui.Form.cmdBIClearID.Caption("Clear")
+Gui.Form.cmdBIClearID.Event(Click,cmdBIClearID_Click)
+Gui.Form.txtRptDesc.Create(TextBox,"",True,3210,300,0,1935,390,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtRptDesc.Parent("tab1",5)
+Gui.Form.cmdBIClearDesc.Create(Button)
+Gui.Form.cmdBIClearDesc.Size(675,330)
+Gui.Form.cmdBIClearDesc.Position(5235,375)
+Gui.Form.cmdBIClearDesc.Parent("tab1",5)
+Gui.Form.cmdBIClearDesc.Caption("Clear")
+Gui.Form.cmdBIClearDesc.Event(Click,cmdBIClearDesc_Click)
+Gui.Form.lbl20.Create(Label,"Report ID",True,870,255,0,180,150,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl20.Parent("tab1",5)
+Gui.Form.txtCrystalFileName.Create(TextBox,"",True,1995,300,0,6150,390,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtCrystalFileName.Parent("tab1",5)
+Gui.Form.cmdBIClearFileName.Create(Button)
+Gui.Form.cmdBIClearFileName.Size(675,330)
+Gui.Form.cmdBIClearFileName.Position(8220,375)
+Gui.Form.cmdBIClearFileName.Parent("tab1",5)
+Gui.Form.cmdBIClearFileName.Caption("Clear")
+Gui.Form.cmdBIClearFileName.Event(Click,cmdBIClearFileName_Click)
+Gui.Form.lbl21.Create(Label,"Description",True,1185,255,0,1935,150,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl21.Parent("tab1",5)
+Gui.Form.lbl22.Create(Label,"Crystal file name",True,1725,255,0,6135,150,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl22.Parent("tab1",5)
+Gui.Form.lbl23.Create(Label,"Rows",True,555,255,0,19380,465,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl23.Parent("tab1",5)
+Gui.Form.cmdBIClearAll.Create(Button)
+Gui.Form.cmdBIClearAll.Size(855,375)
+Gui.Form.cmdBIClearAll.Position(9165,360)
+Gui.Form.cmdBIClearAll.Parent("tab1",5)
+Gui.Form.cmdBIClearAll.Caption("Clear All")
+Gui.Form.cmdBIClearAll.Event(Click,cmdBIClearAll_Click)
+Gui.Form.lblBiRec.Create(Label,"",True,810,255,0,19080,720,True,4,"Arial",8,-2147483626,1)
+Gui.Form.lblBiRec.Parent("tab1",5)
+Gui.Form.lblBiRec.BorderStyle(2)
+Gui.Form.gsBI.Create(GsGridControl)
+Gui.Form.gsBI.Size(19725,12435)
+Gui.Form.gsBI.Position(180,960)
+Gui.Form.gsBI.Parent("tab1",5)
+Gui.Form.cmdFilterBI.Create(Button)
+Gui.Form.cmdFilterBI.Size(855,375)
+Gui.Form.cmdFilterBI.Position(10485,360)
+Gui.Form.cmdFilterBI.Parent("tab1",5)
+Gui.Form.cmdFilterBI.Caption("Find")
+Gui.Form.cmdFilterBI.Event(Click,cmdFilterBI_Click)
+Gui.Form.cmdFilterBI.BackColor(15128749)
+Gui.Form.txtModule.Create(TextBox,"",True,2460,300,0,165,330,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtModule.Parent("tab1",1)
+Gui.Form.lbl24.Create(Label,"Module",True,1095,255,0,165,120,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl24.Parent("tab1",1)
+Gui.Form.cmdProgClearModule.Create(Button)
+Gui.Form.cmdProgClearModule.Size(675,330)
+Gui.Form.cmdProgClearModule.Position(2700,315)
+Gui.Form.cmdProgClearModule.Parent("tab1",1)
+Gui.Form.cmdProgClearModule.Caption("Clear")
+Gui.Form.cmdProgClearModule.Event(Click,cmdProgClearModule_Click)
+Gui.Form.txtTitle.Create(TextBox,"",True,2280,300,0,3570,330,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtTitle.Parent("tab1",1)
+Gui.Form.lbl25.Create(Label,"Title",True,1935,255,0,3585,120,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl25.Parent("tab1",1)
+Gui.Form.cmdProgClearTitle.Create(Button)
+Gui.Form.cmdProgClearTitle.Size(675,330)
+Gui.Form.cmdProgClearTitle.Position(5925,315)
+Gui.Form.cmdProgClearTitle.Parent("tab1",1)
+Gui.Form.cmdProgClearTitle.Caption("Clear")
+Gui.Form.cmdProgClearTitle.Event(Click,cmdProgClearTitle_Click)
+Gui.Form.txtProg.Create(TextBox,"",True,1200,300,0,6795,330,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtProg.Parent("tab1",1)
+Gui.Form.lbl27.Create(Label,"Program",True,1140,255,0,6795,120,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl27.Parent("tab1",1)
+Gui.Form.cmdProgClearProg.Create(Button)
+Gui.Form.cmdProgClearProg.Size(675,330)
+Gui.Form.cmdProgClearProg.Position(8070,315)
+Gui.Form.cmdProgClearProg.Parent("tab1",1)
+Gui.Form.cmdProgClearProg.Caption("Clear")
+Gui.Form.cmdProgClearProg.Event(Click,cmdProgClearProg_Click)
+Gui.Form.cmdProgClearAll.Create(Button)
+Gui.Form.cmdProgClearAll.Size(855,375)
+Gui.Form.cmdProgClearAll.Position(8970,300)
+Gui.Form.cmdProgClearAll.Parent("tab1",1)
+Gui.Form.cmdProgClearAll.Caption("Clear All")
+Gui.Form.cmdProgClearAll.Event(Click,cmdProgClearAll_Click)
+Gui.Form.gsProgram.Create(GsGridControl)
+Gui.Form.gsProgram.Size(19815,12540)
+Gui.Form.gsProgram.Position(165,825)
+Gui.Form.gsProgram.Parent("tab1",1)
+Gui.Form.lbl26.Create(Label,"Rows",True,525,255,0,19455,285,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl26.Parent("tab1",1)
+Gui.Form.lblProgRec.Create(Label,"",True,1245,255,0,18705,570,True,4,"Arial",8,-2147483626,1)
+Gui.Form.lblProgRec.Parent("tab1",1)
+Gui.Form.lblProgRec.BorderStyle(2)
+Gui.Form.txtHook.Create(TextBox,"",True,1005,300,0,135,405,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHook.Parent("tab1",2)
+Gui.Form.cmdHookClearHook.Create(Button)
+Gui.Form.cmdHookClearHook.Size(675,330)
+Gui.Form.cmdHookClearHook.Position(1245,390)
+Gui.Form.cmdHookClearHook.Parent("tab1",2)
+Gui.Form.cmdHookClearHook.Caption("Clear")
+Gui.Form.cmdHookClearHook.Event(Click,cmdHookClearHook_Click)
+Gui.Form.txtHookMenuRef.Create(TextBox,"",True,1215,300,0,2055,405,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookMenuRef.Parent("tab1",2)
+Gui.Form.cmdHookClearMenuRef.Create(Button)
+Gui.Form.cmdHookClearMenuRef.Size(675,330)
+Gui.Form.cmdHookClearMenuRef.Position(3315,390)
+Gui.Form.cmdHookClearMenuRef.Parent("tab1",2)
+Gui.Form.cmdHookClearMenuRef.Caption("Clear")
+Gui.Form.cmdHookClearMenuRef.Event(Click,cmdHookClearMenuRef_Click)
+Gui.Form.txtScreen.Create(TextBox,"",True,1215,300,0,4125,405,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtScreen.Parent("tab1",2)
+Gui.Form.cmdHookClearScreen.Create(Button)
+Gui.Form.cmdHookClearScreen.Size(675,330)
+Gui.Form.cmdHookClearScreen.Position(5385,390)
+Gui.Form.cmdHookClearScreen.Parent("tab1",2)
+Gui.Form.cmdHookClearScreen.Caption("Clear")
+Gui.Form.cmdHookClearScreen.Event(Click,cmdHookClearScreen_Click)
+Gui.Form.txtHookScriptDesc.Create(TextBox,"",True,1560,300,0,6255,405,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookScriptDesc.Parent("tab1",2)
+Gui.Form.cmdHookClearScript.Create(Button)
+Gui.Form.cmdHookClearScript.Size(675,330)
+Gui.Form.cmdHookClearScript.Position(7860,390)
+Gui.Form.cmdHookClearScript.Parent("tab1",2)
+Gui.Form.cmdHookClearScript.Caption("Clear")
+Gui.Form.cmdHookClearScript.Event(Click,cmdHookClearScript_Click)
+Gui.Form.txtHookProg.Create(TextBox,"",True,1215,300,0,8640,405,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookProg.Parent("tab1",2)
+Gui.Form.cmdHookClearProg.Create(Button)
+Gui.Form.cmdHookClearProg.Size(675,330)
+Gui.Form.cmdHookClearProg.Position(9915,390)
+Gui.Form.cmdHookClearProg.Parent("tab1",2)
+Gui.Form.cmdHookClearProg.Caption("Clear")
+Gui.Form.cmdHookClearProg.Event(Click,cmdHookClearProg_Click)
+Gui.Form.cmdHookClearAll.Create(Button)
+Gui.Form.cmdHookClearAll.Size(855,375)
+Gui.Form.cmdHookClearAll.Position(10770,360)
+Gui.Form.cmdHookClearAll.Parent("tab1",2)
+Gui.Form.cmdHookClearAll.Caption("Clear All")
+Gui.Form.cmdHookClearAll.Event(Click,cmdHookClearAll_Click)
+Gui.Form.lbl28.Create(Label,"Hook",True,1125,255,0,165,195,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl28.Parent("tab1",2)
+Gui.Form.lbl29.Create(Label,"Program",True,765,255,0,8640,195,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl29.Parent("tab1",2)
+Gui.Form.lbl30.Create(Label,"Screen",True,765,255,0,4095,195,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl30.Parent("tab1",2)
+Gui.Form.lbl31.Create(Label,"Script Description",True,1530,255,0,6240,195,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl31.Parent("tab1",2)
+Gui.Form.lbl32.Create(Label,"Menu Ref",True,975,255,0,2025,195,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl32.Parent("tab1",2)
+Gui.Form.gsHook.Create(GsGridControl)
+Gui.Form.gsHook.Size(19935,12465)
+Gui.Form.gsHook.Position(120,885)
+Gui.Form.gsHook.Parent("tab1",2)
+Gui.Form.lbl33.Create(Label,"Rows",True,525,255,0,19530,345,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl33.Parent("tab1",2)
+Gui.Form.lblHookRec.Create(Label,"",True,1245,255,0,18780,630,True,4,"Arial",8,-2147483626,1)
+Gui.Form.lblHookRec.Parent("tab1",2)
+Gui.Form.lblHookRec.BorderStyle(2)
+Gui.Form.txtHookAssoID.Create(TextBox,"",True,1215,300,0,150,360,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookAssoID.Parent("tab1",3)
+Gui.Form.cmdHookAssoClearID.Create(Button)
+Gui.Form.cmdHookAssoClearID.Size(675,330)
+Gui.Form.cmdHookAssoClearID.Position(1410,345)
+Gui.Form.cmdHookAssoClearID.Parent("tab1",3)
+Gui.Form.cmdHookAssoClearID.Caption("Clear")
+Gui.Form.cmdHookAssoClearID.Event(Click,cmdHookAssoClearID_Click)
+Gui.Form.txtHookAssoScriptname.Create(TextBox,"",True,1785,300,0,2235,360,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookAssoScriptname.Parent("tab1",3)
+Gui.Form.cmdHookAssoClearScriptName.Create(Button)
+Gui.Form.cmdHookAssoClearScriptName.Size(675,330)
+Gui.Form.cmdHookAssoClearScriptName.Position(4065,345)
+Gui.Form.cmdHookAssoClearScriptName.Parent("tab1",3)
+Gui.Form.cmdHookAssoClearScriptName.Caption("Clear")
+Gui.Form.cmdHookAssoClearScriptName.Event(Click,cmdHookAssoClearScriptName_Click)
+Gui.Form.txtHookAssoScriptPath.Create(TextBox,"",True,6765,300,0,4935,360,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookAssoScriptPath.Parent("tab1",3)
+Gui.Form.cmdHookAssoClearScriptPath.Create(Button)
+Gui.Form.cmdHookAssoClearScriptPath.Size(675,330)
+Gui.Form.cmdHookAssoClearScriptPath.Position(11745,345)
+Gui.Form.cmdHookAssoClearScriptPath.Parent("tab1",3)
+Gui.Form.cmdHookAssoClearScriptPath.Caption("Clear")
+Gui.Form.cmdHookAssoClearScriptPath.Event(Click,cmdHookAssoClearScriptPath_Click)
+Gui.Form.cmdHookAssoClearAll.Create(Button)
+Gui.Form.cmdHookAssoClearAll.Size(855,360)
+Gui.Form.cmdHookAssoClearAll.Position(12615,330)
+Gui.Form.cmdHookAssoClearAll.Parent("tab1",3)
+Gui.Form.cmdHookAssoClearAll.Caption("Clear All")
+Gui.Form.cmdHookAssoClearAll.Event(Click,cmdHookAssoClearAll_Click)
+Gui.Form.lbl34.Create(Label,"ID",True,1215,255,0,120,120,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl34.Parent("tab1",3)
+Gui.Form.lbl35.Create(Label,"Script Name",True,1215,255,0,2190,120,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl35.Parent("tab1",3)
+Gui.Form.lbl36.Create(Label,"Script Path",True,1215,270,0,4920,120,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl36.Parent("tab1",3)
+Gui.Form.gsHookAsso.Create(GsGridControl)
+Gui.Form.gsHookAsso.Size(19785,12390)
+Gui.Form.gsHookAsso.Position(150,900)
+Gui.Form.gsHookAsso.Parent("tab1",3)
+Gui.Form.gsHookMaintLog.Create(GsGridControl)
+Gui.Form.gsHookMaintLog.Size(19785,12930)
+Gui.Form.gsHookMaintLog.Position(210,900)
+Gui.Form.gsHookMaintLog.Parent("tab1",4)
+Gui.Form.txtHookMaintDate.Create(TextBox,"",True,990,300,0,195,330,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookMaintDate.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearDate.Create(Button)
+Gui.Form.cmdHookMaintClearDate.Size(675,330)
+Gui.Form.cmdHookMaintClearDate.Position(1245,315)
+Gui.Form.cmdHookMaintClearDate.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearDate.Caption("Clear")
+Gui.Form.cmdHookMaintClearDate.Event(Click,cmdHookMaintClearDate_Click)
+Gui.Form.txtHookMaintTime.Create(TextBox,"",True,900,300,0,2055,330,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookMaintTime.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearTime.Create(Button)
+Gui.Form.cmdHookMaintClearTime.Size(675,330)
+Gui.Form.cmdHookMaintClearTime.Position(3030,315)
+Gui.Form.cmdHookMaintClearTime.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearTime.Caption("Clear")
+Gui.Form.cmdHookMaintClearTime.Event(Click,cmdHookMaintClearTime_Click)
+Gui.Form.txtHookMaintHook.Create(TextBox,"",True,1050,300,0,3885,330,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookMaintHook.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearHook.Create(Button)
+Gui.Form.cmdHookMaintClearHook.Size(675,330)
+Gui.Form.cmdHookMaintClearHook.Position(5010,315)
+Gui.Form.cmdHookMaintClearHook.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearHook.Caption("Clear")
+Gui.Form.cmdHookMaintClearHook.Event(Click,cmdHookMaintClearHook_Click)
+Gui.Form.txtHookMaintScriptName.Create(TextBox,"",True,2295,300,0,5835,330,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookMaintScriptName.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearScriptName.Create(Button)
+Gui.Form.cmdHookMaintClearScriptName.Size(675,330)
+Gui.Form.cmdHookMaintClearScriptName.Position(8205,315)
+Gui.Form.cmdHookMaintClearScriptName.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearScriptName.Caption("Clear")
+Gui.Form.cmdHookMaintClearScriptName.Event(Click,cmdHookMaintClearScriptName_Click)
+Gui.Form.txtHookMaintScriptPath.Create(TextBox,"",True,5715,300,0,9030,330,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtHookMaintScriptPath.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearScriptPath.Create(Button)
+Gui.Form.cmdHookMaintClearScriptPath.Size(675,330)
+Gui.Form.cmdHookMaintClearScriptPath.Position(14820,315)
+Gui.Form.cmdHookMaintClearScriptPath.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearScriptPath.Caption("Clear")
+Gui.Form.cmdHookMaintClearScriptPath.Event(Click,cmdHookMaintClearScriptPath_Click)
+Gui.Form.lbl37.Create(Label,"CHG_Date",True,1200,255,0,195,105,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl37.Parent("tab1",4)
+Gui.Form.lbl37.DefaultValue("")
+Gui.Form.lbl38.Create(Label,"CHG_Time",True,990,255,0,2025,105,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl38.Parent("tab1",4)
+Gui.Form.lbl39.Create(Label,"Hook",True,765,255,0,3840,105,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl39.Parent("tab1",4)
+Gui.Form.lbl40.Create(Label,"Script Name",True,1200,255,0,5850,105,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl40.Parent("tab1",4)
+Gui.Form.lbl41.Create(Label,"Script Path",True,1200,255,0,8985,105,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl41.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearAll.Create(Button)
+Gui.Form.cmdHookMaintClearAll.Size(855,375)
+Gui.Form.cmdHookMaintClearAll.Position(15615,315)
+Gui.Form.cmdHookMaintClearAll.Parent("tab1",4)
+Gui.Form.cmdHookMaintClearAll.Caption("Clear All")
+Gui.Form.cmdHookMaintClearAll.Event(Click,cmdHookMaintClearAll_Click)
+Gui.Form.cmdProgramFind.Create(Button)
+Gui.Form.cmdProgramFind.Size(855,375)
+Gui.Form.cmdProgramFind.Position(10095,300)
+Gui.Form.cmdProgramFind.Parent("tab1",1)
+Gui.Form.cmdProgramFind.Caption("Find")
+Gui.Form.cmdProgramFind.Event(Click,Filter_Program)
+Gui.Form.cmdProgramFind.BackColor(15128749)
+Gui.Form.cmdHookFind.Create(Button)
+Gui.Form.cmdHookFind.Size(855,375)
+Gui.Form.cmdHookFind.Position(12030,360)
+Gui.Form.cmdHookFind.Parent("tab1",2)
+Gui.Form.cmdHookFind.Caption("Find")
+Gui.Form.cmdHookFind.Event(Click,Filter_Hook)
+Gui.Form.cmdHookFind.BackColor(15128749)
+Gui.Form.cmdHookAssoFind.Create(Button)
+Gui.Form.cmdHookAssoFind.Size(855,375)
+Gui.Form.cmdHookAssoFind.Position(13770,315)
+Gui.Form.cmdHookAssoFind.Parent("tab1",3)
+Gui.Form.cmdHookAssoFind.Caption("Find")
+Gui.Form.cmdHookAssoFind.Event(Click,Filter_HookAsso)
+Gui.Form.cmdHookAssoFind.BackColor(15128749)
+Gui.Form.cmdHookMaintLogFind.Create(Button)
+Gui.Form.cmdHookMaintLogFind.Size(855,375)
+Gui.Form.cmdHookMaintLogFind.Position(16890,300)
+Gui.Form.cmdHookMaintLogFind.Parent("tab1",4)
+Gui.Form.cmdHookMaintLogFind.Caption("Find")
+Gui.Form.cmdHookMaintLogFind.Event(Click,Filter_HookMaint)
+Gui.Form.cmdHookMaintLogFind.BackColor(15128749)
+Gui.Form.cmdDataVisualSelect.Create(Button)
+Gui.Form.cmdDataVisualSelect.Size(720,285)
+Gui.Form.cmdDataVisualSelect.Position(735,30)
+Gui.Form.cmdDataVisualSelect.Parent("tab1",6)
+Gui.Form.cmdDataVisualSelect.Caption("Clear")
+Gui.Form.cmdDataVisualSelect.FontSize(7)
+Gui.Form.cmdDataVisualSelect.Event(Click,cmdDataVisualSelect_Click)
+Gui.Form.cmdDataVisualFrom.Create(Button)
+Gui.Form.cmdDataVisualFrom.Size(720,285)
+Gui.Form.cmdDataVisualFrom.Position(735,1455)
+Gui.Form.cmdDataVisualFrom.Parent("tab1",6)
+Gui.Form.cmdDataVisualFrom.Caption("Clear")
+Gui.Form.cmdDataVisualFrom.FontSize(7)
+Gui.Form.cmdDataVisualFrom.Event(Click,cmdDataVisualFrom_Click)
+Gui.Form.cmdDataVisualWhere.Create(Button)
+Gui.Form.cmdDataVisualWhere.Size(720,285)
+Gui.Form.cmdDataVisualWhere.Position(11820,15)
+Gui.Form.cmdDataVisualWhere.Parent("tab1",6)
+Gui.Form.cmdDataVisualWhere.Caption("Clear")
+Gui.Form.cmdDataVisualWhere.FontSize(7)
+Gui.Form.cmdDataVisualWhere.Event(Click,cmdDataVisualWhere_Click)
+Gui.Form.cmdDataVisualGroupBy.Create(Button)
+Gui.Form.cmdDataVisualGroupBy.Size(720,285)
+Gui.Form.cmdDataVisualGroupBy.Position(11820,975)
+Gui.Form.cmdDataVisualGroupBy.Parent("tab1",6)
+Gui.Form.cmdDataVisualGroupBy.Caption("Clear")
+Gui.Form.cmdDataVisualGroupBy.FontSize(7)
+Gui.Form.cmdDataVisualGroupBy.Event(Click,cmdDataVisualGroupBy_Click)
+Gui.Form.cmdDataVisualOrderBy.Create(Button)
+Gui.Form.cmdDataVisualOrderBy.Size(720,285)
+Gui.Form.cmdDataVisualOrderBy.Position(11820,1755)
+Gui.Form.cmdDataVisualOrderBy.Parent("tab1",6)
+Gui.Form.cmdDataVisualOrderBy.Caption("Clear")
+Gui.Form.cmdDataVisualOrderBy.FontSize(7)
+Gui.Form.cmdDataVisualOrderBy.Event(Click,cmdDataVisualOrderBy_Click)
+Gui.Form.lbl43.Create(Label,"Pre-Filter",True,900,255,0,6120,120,True,0,"Arial",8,-2147483624,0)
+Gui.Form.lbl43.Parent("tab1",0)
+Gui.Form.lbl44.Create(Label,"Post-Filter",True,900,255,0,6120,1740,True,0,"Arial",8,-2147483624,0)
+Gui.Form.lbl44.Parent("tab1",0)
+Gui.Form.lbl45.Create(Label,"Post-Filter",True,900,255,0,195,1740,True,0,"Arial",8,-2147483624,0)
+Gui.Form.lbl45.Parent("tab1",0)
+Gui.Form.lbl47.Create(Label,"Pre-Filter",True,900,255,0,195,120,True,0,"Arial",8,-2147483624,0)
+Gui.Form.lbl47.Parent("tab1",0)
+Gui.Form.lbl48.Create(Label,"Input colums seperated by comma to create data table map string",True,4905,255,0,0,75,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl48.Parent("tab1",7)
+Gui.Form.lbl15.Create(Label,"Rows",True,540,255,0,19395,1440,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl15.Parent("tab1",0)
+Gui.Form.txtInner.Create(TextBox,",",True,840,300,0,12450,12765,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtInner.Parent("tab1",7)
+Gui.Form.txtOuter.Create(TextBox,",",True,840,300,0,13455,12765,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtOuter.Parent("tab1",7)
+Gui.Form.lbl1.Create(Label,"Inner",True,720,255,0,12450,12555,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl1.Parent("tab1",7)
+Gui.Form.lbl49.Create(Label,"Outer",True,720,255,0,13455,12555,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl49.Parent("tab1",7)
+Gui.Form.cmdGenerate.Create(Button)
+Gui.Form.cmdGenerate.Size(1005,375)
+Gui.Form.cmdGenerate.Position(14415,12720)
+Gui.Form.cmdGenerate.Parent("tab1",7)
+Gui.Form.cmdGenerate.Caption("Generate")
+Gui.Form.cmdGenerate.Event(Click,cmdGenerate_Click)
+Gui.Form.lbl46.Create(Label,"Rows",True,600,255,0,19335,330,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl46.Parent("tab1",3)
+Gui.Form.txtHookAssoRec.Create(TextBox,"",True,765,300,0,19155,555,True,1,"Arial",8,-2147483643,2)
+Gui.Form.txtHookAssoRec.Parent("tab1",3)
+Gui.Form.txtHookMaintRec.Create(TextBox,"",True,765,300,0,19215,555,True,1,"Arial",8,-2147483643,2)
+Gui.Form.txtHookMaintRec.Parent("tab1",4)
+Gui.Form.lbl50.Create(Label,"Rows",True,585,255,0,19350,315,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lbl50.Parent("tab1",4)
+Gui.Form.txtScriptPath.Create(TextBox,"",False,8865,300,0,45,45,True,0,"Arial",8,-2147483643,2)
+Gui.Form.lblc.Create(Label,"Current Database:",True,1425,255,0,30,120,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblc.ForeColor(-2147483635)
+Gui.Form.lblcurrentDB.Create(Label,"N/A",True,1935,255,0,1440,120,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblcurrentDB.FontStyle(True,False,False,False,False)
+Gui.Form.lblcurrentDB.ForeColor(4678655)
+Gui.Form.cmdRefresh.Create(Button)
+Gui.Form.cmdRefresh.Size(960,375)
+Gui.Form.cmdRefresh.Position(19245,105)
+Gui.Form.cmdRefresh.Caption("Refresh")
+Gui.Form.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.Form.cmdRefresh.BackColor(15128749)
+Gui.Form.cmdRefresh.Visible(False)
+Gui.Form.lblDBLIst.Create(Label,"Select Database and click Refresh:",False,2655,255,0,14685,165,True,0,"Arial",8,-2147483633,0)
+Gui.Form.cboDatabase.Create(ComboBox)
+Gui.Form.cboDatabase.Size(1800,330)
+Gui.Form.cboDatabase.Position(17340,105)
+Gui.Form.cboDatabase.Visible(False)
+Gui.Form.cmdSwitchDB.Create(Button)
+Gui.Form.cmdSwitchDB.Size(1530,375)
+Gui.Form.cmdSwitchDB.Position(18675,105)
+Gui.Form.cmdSwitchDB.Caption("Switch Database")
+Gui.Form.cmdSwitchDB.Event(Click,cmdSwitchDB_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Help_Text.Start
+f.Intrinsic.UI.InvokeWaitDialog("Get instructions...")				
+v.Local.sText.Declare(string)
+v.Local.sText.Set("Custom Kit*!*Bao Nguyen - Version: 3.0*!*====================================================================================================================*!*This program helps application development using GAB and Pervasive Database*!*Features:*!*1/Tab File n Fields:*!*Put in a file name => list all tables used in that file name*!*Get the structure of any table from Pervasive database very quickly*!*Search table name and/or any field with size, data type from Pervasive database very quickly*!*Search any field with size, datatype from Pervasive database very quickly*!*Data Type is defined from BDataType*!*Notes are saved to B_Field_Notes*!*2/Program:*!*Help find which program is used for a menu item*!*3/Hook*!*Help find hook quickly*!*4/Hook Association*!*5/Hook Maintenance log*!*6/BI report*!*Help find report ID and report file quickly*!*7/Tab Data Visual. :*!*Load a database table to gsGrid for using the gsGrid features (filter, sort and more in the future) which enhances the Data*!*Visualization*!*Get focused columns:*!*Step 1: Select * from the Table you want to pull*!*Step 2: Clear the Select textbox*!*Step 3: Check the 'Get column names to Select' checkbox*!*Step 4: On the grid, click on columns you want to concentrate on, it will copy column names to Select textbox*!*Step 5: Click OK to load again the grid, this time only the columns we want to concentrate will display.*!*(The column names we want to concentrate on displaying in Select textbox can be copied to the String tab, to create a Map string that we want to put in GAB SaveToDB function.*!*This will save time to verify typo in Map string)*!*We have 2 ways to Run SQL: If we click Run SQL(blue button), the SQL statement will be generated from the upper part and put in the SQL Statement textbox.*!*Or we can put a complete SQL statement in the SQL statement textbox then hit Run SQL(transparent button).*!*8/Tab String:*!*Create Map string to put in GAB SaveToDB function.*!*If the same DT column names and DB column names, put them in textbox Same column names with comma (,) delimiter, then click Add button*!*If not, put DT column name and DB column name in the lower part, then click Add button")
+f.Intrinsic.String.Replace(v.Local.sText,"*!*",v.Ambient.NewLine,v.Local.sText)
+gui.Form.txtHelp.Text(v.Local.sText)
+f.Intrinsic.UI.CloseWaitDialog
+
+Program.Sub.Help_Text.End
+
+Program.Sub.Main.Start
+'BN, Jan 2017
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sDSNList)
+v.Local..BulkDeclareLong(iCnt,iComboListIndex)
+v.Local.bEx.Declare
+
+f.ODBC.Connection!conx.OpenCompanyConnection(1000)
+
+'Database list
+Function.ODBC.Misc.GETDSNLIST(v.Local.sDSNList)
+F.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sDSNList.UBound,1)
+	f.Intrinsic.String.IsInString(v.Local.sDSNList(v.Local.iCnt),"GLOBAL_",True,V.Local.bEx)
+	f.Intrinsic.Control.If(v.Local.bEx)
+		gui.Form.cboDatabase.AddItem(v.Local.sDSNList(v.Local.iCnt),v.Local.iComboListIndex)
+		f.Intrinsic.Math.Add(v.Local.iComboListIndex,1,v.Local.iComboListIndex)
+	f.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(v.Local.iCnt)
+gui.Form.cboDatabase.Text(v.Ambient.PDSN)
+
+'Load
+f.Intrinsic.Control.CallSub(load)
+'Setup
+Gui.Form.tab1.Anchor(15)
+Gui.Form.gsProgram.Anchor(15)
+Gui.Form.gsHook.Anchor(15)
+Gui.Form.gsHookMaintLog.Anchor(15)
+Gui.Form.gsHookAsso.Anchor(15)
+Gui.Form.gsBI.Anchor(15)
+Gui.Form.gsDataVisual.Anchor(15)
+f.Intrinsic.Control.CallSub(help_text)
+gui.Form.tab1.SetTab(0)
+gui.Form.txtScriptPath.Text(v.Ambient.ScriptPath)
+gui.Form.lblcurrentDB.Caption(v.Ambient.PDSN)
+f.Intrinsic.Control.CallSub("chkSameColumnName_Click")
+
+gui.Form..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.Load.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError)
+
+'Check Custom Tables
+f.Intrinsic.Control.CallSub(Check_Custom_Tables)
+
+'Tab Files & Fields
+f.Intrinsic.Control.CallSub(Load_files_tables)
+F.Intrinsic.Control.CallSub(Load_pervasive_tables)
+
+'If it is db COMMON, will not go further to load/refresh other tab
+F.Intrinsic.Control.If(V.Screen.Form!cboDatabase.Text,=,"GLOBAL_COMMON")
+	f.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'Other tab: BI,Program,Hook,Hook Association, Hook Maintenance,String
+f.Intrinsic.Control.CallSub(load_program)
+f.Intrinsic.Control.CallSub(load_hook)
+f.Intrinsic.Control.CallSub(load_hook_association)
+f.Intrinsic.Control.CallSub(load_hook_maint_log)
+f.Intrinsic.Control.CallSub(Load_BI)
+f.Intrinsic.Control.CallSub(create_map_dt)
+'Data Visual
+f.Intrinsic.Control.If(v.DataTable.DTVS.Exists)
+	f.Data.DataTable.Close("DTVS")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.Create("DTVS",True)
+f.Data.DataTable.AddColumn("DTVS","Sample","String")
+GUI.Form.gsDataVisual.AddGridviewFromDatatable("DTVS_GV","DTVS")
+gui.Form.gsDataVisual.MainView("DTVS_GV")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Load.End
+
+Program.Sub.cmdRefresh_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdRefresh_Click_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare
+
+f.Intrinsic.Control.If(V.Screen.Form!cboDatabase.Text,<>,"")
+	f.ODBC.Connection!conx.Close
+	F.odbc.Connection!conx.OpenConnection(V.Screen.Form!cboDatabase.Text,"Master","Master",600)
+	gui.Form.lblcurrentDB.Caption(V.Screen.Form!cboDatabase.Text)
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.CallSub(load)
+
+gui.Form.lblDBLIst.Visible(False)
+gui.Form.cboDatabase.Visible(False)
+gui.Form.cmdRefresh.Visible(False)
+gui.Form.cmdSwitchDB.Visible(True)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdRefresh_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.Check_Custom_Tables.Start
+F.Intrinsic.Control.SetErrorHandler("Check_Custom_Tables_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sSQL,sNum_Type_Pairs,sNum_Type,sText)
+v.Local.bExist.Declare
+v.Local.iCnt.Declare
+
+'BDataType
+f.Intrinsic.String.Split("0*CHAR,1*INT,2*DFR,3*DATE,4*TIME,5*DECIMAL,6*MONEY,7*BIT,8*NUMERIC,9*BFLOAT,11*VARCHAR,14*UINT,15*IDENTITY,16*BIT,17*NUMERICSTS,18*NUMERICSA,19*CURRENCY,20*TIMESTAMP,21*LONGVARCHAR,25*NCHAR,26*NVARCHAR,28*NUMERICSLB,29*NUMERICSLS,30*DATETIME,31*NUMERICSTB",",",v.Local.sNum_Type_Pairs)
+
+Function.ODBC.Connection!conx.TableExists("BDataType",v.Local.bExist)
+f.Intrinsic.Control.If(v.Local.bExist,=,false)
+	f.Intrinsic.UI.InvokeWaitDialog("Creating data type values...")
+	f.ODBC.Connection!conx.Execute("CREATE TABLE BDataType(DataTypeNumber INTEGER,DataTypeName CHAR(15));")
+	f.ODBC.Connection!conx.Execute("CREATE INDEX DTN ON BDataType(DataTypeNumber);")
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sNum_Type_Pairs.UBound,1)
+		f.Intrinsic.String.Split(v.Local.sNum_Type_Pairs(v.Local.iCnt),"*",v.Local.sNum_Type)
+		f.Intrinsic.String.Build("Insert into BDataType values({0},'{1}')",v.Local.sNum_Type(0),v.Local.sNum_Type(1),v.Local.sSQL)
+		f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+	f.Intrinsic.UI.CloseWaitDialog
+f.Intrinsic.Control.Endif
+
+'B_Field_Notes
+v.Local.bExist.Set(false)
+Function.ODBC.Connection!conx.TableExists("B_Field_Notes",v.Local.bExist)
+f.Intrinsic.Control.If(v.Local.bExist,=,false)
+	f.Intrinsic.UI.InvokeWaitDialog("Creating B_Field_Notes tables...")	
+	f.ODBC.Connection!conx.Execute("CREATE TABLE B_FIELD_NOTES(TABLENAME CHAR(20),FIELDNAME CHAR(20),NOTE CHAR(50));")
+	f.ODBC.Connection!conx.Execute("CREATE INDEX TF ON B_FIELD_NOTES(TableName,FieldName);")
+	f.Intrinsic.UI.CloseWaitDialog
+f.Intrinsic.Control.Endif
+
+f.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Check_Custom_Tables_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Check_Custom_Tables.End
+
+Program.Sub.Set_Grid_Options.Start
+Gui.Form.[v.args.gs].SetGridViewProperty(v.Args.GV,"OptionsViewShowGroupPanel",True)
+Gui.Form.[v.args.gs].SetGridViewProperty(v.Args.GV,"MultiSelect",True)
+Gui.Form.[v.args.gs].SetGridViewProperty(v.Args.GV,"AllowSort",True)
+Gui.Form.[v.args.gs].SetGridViewProperty(v.Args.GV,"AllowFilter",True)
+Gui.Form.[v.args.gs].SetGridViewProperty(v.Args.GV,"OptionsDetailShowDetailTabs",False)
+Gui.Form.[v.args.gs].SetGridViewProperty(v.Args.GV,"EnableAppearanceOddRow",True)
+Gui.Form.[v.args.gs].SetGridViewProperty(v.Args.GV,"OptionsViewRowAutoHeight",True)
+Gui.Form.[v.args.gs].SetGridViewProperty(v.Args.GV,"OptionsFindAlwaysVisible",True)
+Gui.Form.[v.args.gs].SetGridViewProperty(v.Args.GV,"OptionsViewShowAutoFilterRow",True)
+Gui.Form.[v.args.gs].SetGridViewProperty(v.Args.GV,"OptionsFilterUseNewCustomFilterDialog",True)
+ 
+Program.Sub.Set_Grid_Options.End
+
+'==============================================================================Begin - Tab File n Fields. ===========================================================================================================================================================================================================================
+Program.Sub.Load_Files_Tables.Start
+'Load Files <=> Tables of Tab Files & Fields
+F.Intrinsic.Control.SetErrorHandler("Load_Files_Tables_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError)
+
+F.Intrinsic.Control.If(V.DataTable.FT_DT.Exists,=,True)
+	F.Data.DataTable.Close("FT_DT")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading Files list...")
+f.Data.DataTable.CreateFromSQL("FT_DT","conx","select Xf$Loc as File_Name,Xf$Name as Table_Name from X$File",true)
+Gui.Form.gsFilesTables.AddGridViewFromDataTable("FT_GV","FT_DT")
+f.Intrinsic.Control.CallSub(set_grid_options,"gs","gsFilesTables","GV","FT_GV")
+gui.Form.gsFilesTables.setColumnProperty("FT_GV","Table_Name","MaxWidth","150")
+gui.Form.gsFilesTables.MainView("FT_GV")
+gui.Form.lblFileRecords.Text(v.DataTable.FT_DT.RowCount)
+f.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Files_Tables_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindFields.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Files_Tables.End
+
+Program.Sub.cmdFilterFilesTables_Click.Start
+'Post-filter for Files <=> Tables of Tab Files & Fields
+F.Intrinsic.Control.SetErrorHandler("cmdFilterFilesTables_Click_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sFilter,sHold)
+
+f.Intrinsic.Control.If(V.DataView.FT_DT!FT_DTV.Exists,=,true)	
+	Function.Data.DataView.Close("FT_DT","FT_DTV")
+f.Intrinsic.Control.endif
+
+f.Intrinsic.Control.If(v.Screen.Form!txtFileName.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("File_Name like '*{0}*'",v.Screen.Form!txtFileName.Text.Trim,v.Local.sFilter)	
+f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.If(v.Screen.Form!txtFileTable.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Table_Name like '*{0}*'",v.Screen.Form!txtFileTable.Text.Trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+Function.Data.DataView.Create("FT_DT","FT_DTV",22,v.Local.sFilter,"")
+Gui.Form.gsFilesTables.AddGridViewFromDataview("FT_GV","FT_DT","FT_DTV")
+gui.Form.gsFilesTables.SuspendLayout()
+gui.Form.gsFilesTables.setColumnProperty("FT_GV","Table_Name","MaxWidth","150")
+f.Intrinsic.Control.CallSub(set_grid_options,"gs","gsFilesTables","GV","FT_GV")
+gui.Form.gsFilesTables.ResumeLayout()
+gui.Form.gsFilesTables.MainView("FT_GV")
+gui.Form.lblFileRecords.Text(V.DataView.FT_DT!FT_DTV.RowCount)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdFilterFilesTables_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindFields.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdFilterFilesTables_Click.End
+
+Program.Sub.Load_Pervasive_Tables.Start
+'Load Tables <=> Fields of Tab Files & Fields
+F.Intrinsic.Control.SetErrorHandler("Load_Pervasive_Tables_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError)
+v.Local.iTableFieldRecords.Declare
+
+F.Intrinsic.Control.If(V.DataTable.DT.Exists,=,True)
+	F.Data.DataTable.Close("DT")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading Pervasive Tables...")
+f.Data.DataTable.CreateFromSQL("DT","conx","Select Xf$Name As TableName,F1.XE$Name As FieldName,F1.Xe$DataType as DataType,XE$FLAGS as Flags,dt.DataTypeName,Xe$Size as Size,Xe$Dec as Decimal,Note FROM X$File INNER JOIN X$Field F1 On F1.XE$File = XF$ID LEFT JOIN BDataType dt on F1.Xe$DataType = dt.DataTypeNumber LEFT JOIN B_Field_Notes n on X$File.Xf$Name = n.TableName and F1.Xe$Name = n.FieldName WHERE F1.XE$Name Not Like 'NN_%' And  F1.XE$DataType <> 255 Order By XF$Name",True)	
+
+f.Intrinsic.Control.If(V.DataView.DT!DTTypeDV.Exists,=,true)
+	Function.Data.DataView.Close("DT","DTTypeDV")
+f.Intrinsic.Control.endif
+'Binary
+F.Data.DataView.Create("DT","DTTypeDV",22,"DataType = 0 and (Flags = 4100 or Flags = 4096)","")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","BINARY")
+'BIGINT,INTEGER,SMALLINT,TINYINT
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 1 and Size = 8")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","BIGINT")
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 1 and Size = 4")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","INTEGER")
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 1 and Size = 2")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","SMALLINT")
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 1 and Size = 1")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","TINYINT")
+'DOUBLE,FLOAT,REAL
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 2 and Size = 8")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","DOUBLE/FLOAT")
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 2 and Size = 4")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","REAL")
+'BFLOAT4,BFLOAT8
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 9 and Size = 8")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","BFLOAT8")
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 9 and Size = 4")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","BFLOAT4")
+'UBIGINT,UINT,USMALLINT,UTINYINT
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 14 and Size = 8")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","UBIGINT")
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 14 and Size = 4")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","UINTEGER")
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 14 and Size = 2")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","USMALLINT")
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 14 and Size = 1")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","UTINYINT")
+'IDENDITY,SMALLIDENTITY
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 15 and Size = 4")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","IDENTITY")
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 15 and Size = 2")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","SMALLIDENTITY")
+'LONGVARBINARY,NLONGVARCHAR
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 21 and Flags = 4100")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","LONGVARBINARY")
+F.Data.DataView.SetFilter("DT","DTTypeDV","DataType = 21 and Flags = 2052")
+f.Data.DataView.SetValue("DT","DTTypeDV",-1,"DataTypeName","NLONGVARCHAR")
+
+Gui.Form.gs.AddGridViewFromDataTable("GV","DT")
+f.Intrinsic.Control.CallSub("Format_Gs_GV")
+gui.Form.gs.MainView("GV")
+gui.Form.lblTableFieldRecords.Text(v.DataTable.DT.RowCount)
+f.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Pervasive_Tables_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	f.Intrinsic.UI.CloseWaitDialog
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Pervasive_Tables.End
+
+Program.Sub.Format_gs_GV.Start
+gui.Form.gs.SuspendLayout()
+f.Intrinsic.Control.CallSub(set_grid_options,"gs","gs","GV","GV")
+gui.Form.gs.setColumnProperty("GV","Size","MaxWidth","35")
+gui.Form.gs.setColumnProperty("GV","DataTypeName","MaxWidth","100")
+gui.Form.gs.setColumnProperty("GV","FieldName","MaxWidth","180")
+gui.Form.gs.setColumnProperty("GV","Decimal","MaxWidth","45")
+gui.Form.gs.setColumnProperty("GV","DataType","MaxWidth","33")
+gui.Form.gs.setColumnProperty("GV","Flags","MaxWidth","35")
+gui.Form.gs.setColumnProperty("GV","Note","AllowEdit",True)
+gui.Form.gs.setColumnProperty("GV","Note","ReadOnly",False)
+gui.Form.gs.setColumnProperty("GV","DataType","Caption","Type")
+gui.Form.gs.setColumnProperty("GV","DataTypeName","Caption","Type")
+gui.Form.gs.ResumeLayout()
+Program.Sub.Format_gs_GV.End
+
+Program.Sub.Click_Filter_FindNFields.Start
+'Post-filter for Tables <=> Fields of Tab Files & Fields
+F.Intrinsic.Control.SetErrorHandler("cmdFilter_Click_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sFilter,sHold)
+
+f.Intrinsic.Control.If(V.DataView.DT!DTV.Exists,=,true)	
+	Function.Data.DataView.Close("DT","DTV")
+f.Intrinsic.Control.endif
+
+f.Intrinsic.Control.If(v.Screen.Form!txtTable.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("TableName like '*{0}*'",v.Screen.Form!txtTable.Text.Trim,v.Local.sFilter)	
+f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.If(v.Screen.Form!txtField.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("FieldName like '*{0}*'",v.Screen.Form!txtField.Text.Trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+Function.Data.DataView.Create("DT","DTV",22,v.Local.sFilter,"")
+Gui.Form.gs.AddGridViewFromDataview("GV","DT","DTV")
+f.Intrinsic.Control.CallSub("Format_Gs_GV")
+gui.Form.gs.MainView("GV")
+gui.Form.lblTableFieldRecords.Text(V.DataView.DT!DTV.RowCount)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdFilter_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	f.Intrinsic.UI.CloseWaitDialog
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Click_Filter_FindNFields.End
+
+Program.Sub.cmdFilenFieldClearTableName_Click.Start
+gui.Form.txtTable.Text("")
+Program.Sub.cmdFilenFieldClearTableName_Click.End
+
+Program.Sub.cmdFilenFieldClearFieldName_Click.Start
+gui.Form.txtField.Text("")
+Program.Sub.cmdFilenFieldClearFieldName_Click.End
+
+Program.Sub.gs_CellValueChanged.Start
+F.Intrinsic.Control.SetErrorHandler("gs_CellValueChanged_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local..BulkDeclareString(sError,sSQL,sRowNumber,sNote)
+v.Local..BulkDeclareLong(iRowNumber,iExist)
+
+Gui.Form.gs.GetSelectedRows("GV",v.Local.sRowNumber)
+v.Local.iRowNumber.Set(v.Local.sRowNumber)
+V.Local.sNote.Set(v.DataTable.DT(v.Local.iRowNumber).Note!FieldVAlTrim)
+
+F.Intrinsic.Control.If(V.Local.sNote.Length,>,30)
+	f.Intrinsic.UI.Msgbox("Note must have 30 characters max")
+	'Put back original Note to the cell
+	f.Intrinsic.String.Build("Select Note from B_Field_Notes where TableName = '{0}' and FieldName = '{1}'",v.DataTable.DT(v.Local.iRowNumber).TableName!FieldVAlString,v.DataTable.DT(v.Local.iRowNumber).FieldName!FieldVAlString,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sNote)
+	f.Data.DataTable.SetValue("DT",v.Local.iRowNumber,"Note",v.Local.sNote)
+F.Intrinsic.Control.Else
+	f.Intrinsic.String.Build("Select count(*) from B_Field_Notes where TableName = '{0}' and FieldName = '{1}'",v.DataTable.DT(v.Local.iRowNumber).TableName!FieldVAlString,v.DataTable.DT(v.Local.iRowNumber).FieldName!FieldVAlString,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.iExist)
+	f.Intrinsic.Control.If(v.Local.iExist,>,0)
+		f.Intrinsic.String.Build("Update B_Field_Notes Set Note = '{0}' where TableName = '{1}' and FieldName = '{2}'",v.Local.sNote,v.DataTable.DT(v.Local.iRowNumber).TableName!FieldVAlString,v.DataTable.DT(v.Local.iRowNumber).FieldName!FieldVAlString,v.Local.sSQL)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("Insert into B_Field_Notes values('{0}','{1}','{2}')",v.DataTable.DT(v.Local.iRowNumber).TableName!FieldVAlString,v.DataTable.DT(v.Local.iRowNumber).FieldName!FieldVAlString,v.Local.sNote,v.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gs_CellValueChanged_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindFields.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.gs_CellValueChanged.End
+
+Program.Sub.cmdFilenFieldClearFileName_Click.Start
+gui.Form.txtFileName.Text("")
+Program.Sub.cmdFilenFieldClearFileName_Click.End
+
+Program.Sub.cmdFilenFieldClearFieldFileTableName_Click.Start
+gui.Form.txtFileTable.Text("")
+Program.Sub.cmdFilenFieldClearFieldFileTableName_Click.End
+
+'==============================================================================End - Tab File n Fields.  ==========================================================================================================================================================================================================================
+
+
+'==============================================================================Begin - Tab Program  ==========================================================================================================================================================================================================================
+Program.Sub.Load_Program.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Program")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sFilterNot0,sFilter0,sTitle)
+v.Local..BulkDeclareLong(i1,i2)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading Program Table...")
+
+F.Intrinsic.Control.If(V.DataTable.DT_Prog.Exists,=,True)
+	F.Data.DataTable.Close("DT_Prog")
+F.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("DT_Prog","conx","select m.Module_Title,h.Header_Title,s.Title,m.Module_ID,h.Header_ID,s.Selection_ID,s.Sequence,j.Program_App,s.Job_Stream_ID from Menu_Selections s Left Join Menu_Headers h on s.Header_ID = h.Header_ID left join Menu_Module m on h.Module_ID = m.Module_ID left join Menu_Job_Stream j on s.Job_Stream_ID = j.Job_Stream_ID  order by m.Module_ID,h.Header_ID,s.Selection_ID,s.Sequence",true)
+
+f.Intrinsic.Control.If(V.DataView.DT_Prog!SeqNot0_DV.Exists,=,true)
+	Function.Data.DataView.Close("DT_Prog","SeqNot0_DV")
+f.Intrinsic.Control.endif
+F.Data.DataView.Create("DT_Prog","SeqNot0_DV",22,"","")
+
+f.Intrinsic.Control.If(V.DataView.DT_Prog!Seq0_DV.Exists,=,true)
+	Function.Data.DataView.Close("DT_Prog","Seq0_DV")
+f.Intrinsic.Control.endif
+F.Data.DataView.Create("DT_Prog","Seq0_DV",22,"","")
+
+'Create distinct Module_ID,Header_ID,Selection_ID
+f.Intrinsic.Control.If(v.DataTable.DT_Prog_Distinct.Exists)
+	f.Data.DataTable.Close("DT_Prog_Distinct")
+f.Intrinsic.Control.EndIf
+F.Data.DataView.ToDataTableDistinct("DT_Prog","SeqNot0_DV","DT_Prog_Distinct","Module_ID*!*Header_ID*!*Selection_ID","True")
+
+'Loop
+f.Intrinsic.Control.For(v.Local.i1,0,v.DataTable.DT_Prog_Distinct.RowCount--,1)
+	f.Intrinsic.Control.If(v.DataTable.DT_Prog_Distinct(v.Local.i1).Module_ID!FieldValString,<>,"",and,v.DataTable.DT_Prog_Distinct(v.Local.i1).Header_ID!FieldValString,<>,"",v.DataTable.DT_Prog_Distinct(v.Local.i1).Selection_ID!FieldValString,<>,"")	
+		'Get Seq = 0 Title
+		f.Intrinsic.String.Build("Module_ID = {0} and Header_ID = {1} and Selection_ID = {2} and Sequence = 0",v.DataTable.DT_Prog_Distinct(v.Local.i1).Module_ID!FieldValString,v.DataTable.DT_Prog_Distinct(v.Local.i1).Header_ID!FieldValString,v.DataTable.DT_Prog_Distinct(v.Local.i1).Selection_ID!FieldValString,v.Local.sFilter0)
+		F.Data.DataView.SetFilter("DT_Prog","Seq0_DV",v.Local.sFilter0)
+		'Get Seq <> 0 and reset the Title: will be Tab TitleOfSeq0 Tab TitleOfSeqNot0
+		f.Intrinsic.String.Build("Module_ID = {0} and Header_ID = {1} and Selection_ID = {2} and Sequence <> 0",v.DataTable.DT_Prog_Distinct(v.Local.i1).Module_ID!FieldValString,v.DataTable.DT_Prog_Distinct(v.Local.i1).Header_ID!FieldValString,v.DataTable.DT_Prog_Distinct(v.Local.i1).Selection_ID!FieldValString,v.Local.sFilterNot0)
+		F.Data.DataView.SetFilter("DT_Prog","SeqNot0_DV",v.Local.sFilterNot0)
+		f.Intrinsic.Control.For(v.Local.i2,0,v.DataView.DT_Prog!SeqNot0_DV.RowCount--,1)
+			'BN, April 11,2018 check the Seq0_DV
+			F.Intrinsic.Control.If(v.DataView.DT_Prog!Seq0_DV.RowCount,>,0)
+				f.Intrinsic.String.Build("{0}{0}{1}{0}>{0}{2}",v.Ambient.Tab,V.DataView.DT_Prog!Seq0_DV(0).Title!FieldValTrim,V.DataView.DT_Prog!SeqNot0_DV(v.Local.i2).Title!FieldValTrim,v.Local.sTitle)
+				f.Data.DataView.SetValue("DT_Prog","SeqNot0_DV",v.Local.i2,"Title",v.Local.sTitle)
+			F.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.Next(v.Local.i2)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.Next(v.Local.i1)
+
+Function.Data.DataTable.AddExpressionColumn("DT_Prog","Menu_Ref","string","Module_Title + ' > ' + Header_Title + ' > ' + Title")
+
+Gui.Form.gsProgram.AddGridViewFromDataTable("GV_Prog","DT_Prog")
+f.Intrinsic.Control.CallSub("Format_gsProgram_GV_Prog")
+gui.Form.gsProgram.MainView("GV_Prog")
+gui.Form.lblProgRec.Text(v.DataTable.DT_Prog.RowCount)
+f.Intrinsic.UI.CloseWaitDialog
+
+f.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Program")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Program.End
+
+Program.Sub.Format_gsProgram_GV_Prog.Start
+gui.Form.gsProgram.SuspendLayout()
+f.Intrinsic.Control.CallSub(set_grid_options,"gs","gsProgram","GV","GV_Prog")
+gui.Form.gsProgram.SetColumnProperty("GV_Prog","Module_ID","Visible","False")
+gui.Form.gsProgram.SetColumnProperty("GV_Prog","Header_ID","Visible","False")
+gui.Form.gsProgram.SetColumnProperty("GV_Prog","Selection_ID","Visible","False")
+gui.Form.gsProgram.SetColumnProperty("GV_Prog","Sequence","Visible","False")
+gui.Form.gsProgram.SetColumnProperty("GV_Prog","Job_Stream_ID","Visible","False")
+gui.Form.gsProgram.setColumnProperty("GV_Prog","Module_Title","MaxWidth","250")
+gui.Form.gsProgram.setColumnProperty("GV_Prog","Header_Title","MaxWidth","80")
+gui.Form.gsProgram.setColumnProperty("GV_Prog","Program_App","MaxWidth","200")
+gui.Form.gsProgram.setColumnProperty("GV_Prog","Module_Title","Caption","Module")
+gui.Form.gsProgram.setColumnProperty("GV_Prog","Header_Title","Caption","Header")
+gui.Form.gsProgram.setColumnProperty("GV_Prog","Program_App","Caption","Program App")
+gui.Form.gsProgram.setColumnProperty("GV_Prog","Title","Caption","Title")
+gui.Form.gsProgram.setColumnProperty("GV_Prog","Menu_Ref","Caption","Menu Path")
+gui.Form.gsProgram.ResumeLayout()
+Program.Sub.Format_gsProgram_GV_Prog.End
+
+Program.Sub.Filter_Program.Start
+F.Intrinsic.Control.SetErrorHandler("Filter_Program")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sFilter,sHold)
+
+f.Intrinsic.Control.If(V.DataView.DT_Prog!DTV_Prog.Exists,=,true)	
+	Function.Data.DataView.Close("DT_Prog","DTV_Prog")
+f.Intrinsic.Control.endif
+
+f.Intrinsic.Control.If(v.Screen.Form!txtModule.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Module_Title like '*{0}*'",v.Screen.Form!txtModule.Text,v.Local.sFilter)	
+f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.If(v.Screen.Form!txtTitle.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Title like '*{0}*'",v.Screen.Form!txtTitle.Text,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!txtProg.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Program_App like '*{0}*'",v.Screen.Form!txtProg.Text,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+Function.Data.DataView.Create("DT_Prog","DTV_Prog",22,v.Local.sFilter,"")
+Gui.Form.gsProgram.AddGridViewFromDataview("GV_Prog","DT_Prog","DTV_Prog")
+f.Intrinsic.Control.CallSub("Format_gsProgram_GV_Prog")
+gui.Form.gsProgram.MainView("GV_Prog")
+gui.Form.lblProgRec.Text(V.DataView.DT_Prog!DTV_Prog.RowCount)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Filter_Program")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Filter_Program.End
+
+Program.Sub.cmdProgClearModule_Click.Start
+gui.Form.txtModule.Text("")
+Program.Sub.cmdProgClearModule_Click.End
+
+Program.Sub.cmdProgClearTitle_Click.Start
+gui.Form.txtTitle.Text("")
+Program.Sub.cmdProgClearTitle_Click.End
+
+Program.Sub.cmdProgClearProg_Click.Start
+gui.Form.txtProg.Text("")
+Program.Sub.cmdProgClearProg_Click.End
+
+Program.Sub.cmdProgClearAll_Click.Start
+gui.Form.txtModule.Text("")
+gui.Form.txtTitle.Text("")
+gui.Form.txtProg.Text("")
+Program.Sub.cmdProgClearAll_Click.End
+
+'==============================================================================End - Tab Program  ==========================================================================================================================================================================================================================
+
+'==============================================================================Begin- Hook  ==========================================================================================================================================================================================================================
+Program.Sub.Load_Hook.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Hook")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading Hook Table...")
+F.Intrinsic.Control.If(V.DataTable.DT_Hook.Exists,=,True)
+	F.Data.DataTable.Close("DT_Hook")
+F.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("DT_Hook","conx","select  ID,MENU_REF,SCREEN,SCRIPT_DESC,PROGRAM,HOOK_TYPE,OVERRIDE_FLAG,CANCEL_FLAG from Hook_Global order by ID",true)	
+Gui.Form.gsHook.AddGridViewFromDataTable("GV_Hook","DT_Hook")
+f.Intrinsic.Control.CallSub("Format_gsHook_GV_Hook")
+gui.Form.gsHook.MainView("GV_Hook")
+gui.Form.lblHookRec.Text(v.DataTable.DT_Hook.RowCount)
+f.Intrinsic.UI.CloseWaitDialog
+
+f.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Hook")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Hook.End
+
+Program.Sub.Format_gsHook_GV_Hook.Start
+gui.Form.gsHook.SuspendLayout()
+f.Intrinsic.Control.CallSub(set_grid_options,"gs","gsHook","GV","GV_Hook")
+gui.Form.gsHook.setColumnProperty("GV_Hook","ID","MaxWidth","80")
+gui.Form.gsHook.setColumnProperty("GV_Hook","Screen","MaxWidth","100")
+gui.Form.gsHook.setColumnProperty("GV_Hook","Program","MaxWidth","120")
+gui.Form.gsHook.setColumnProperty("GV_Hook","Override_flag","MaxWidth","100")
+gui.Form.gsHook.setColumnProperty("GV_Hook","Cancel_Flag","MaxWidth","80")
+gui.Form.gsHook.setColumnProperty("GV_Hook","Hook_Type","MaxWidth","120")
+gui.Form.gsHook.setColumnProperty("GV_Hook","Script_Desc","MaxWidth","300")
+gui.Form.gsHook.ResumeLayout()
+Program.Sub.Format_gsHook_GV_Hook.End
+
+Program.Sub.Filter_Hook.Start
+F.Intrinsic.Control.SetErrorHandler("Filter_Hook")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sFilter,sHold)
+
+f.Intrinsic.Control.If(V.DataView.DT_Hook!DTV_Hook.Exists,=,true)			
+	Function.Data.DataView.Close("DT_Hook","DTV_Hook")
+f.Intrinsic.Control.endif
+
+f.Intrinsic.Control.If(v.Screen.Form!txtHook.Text.trim,<>,"")
+	f.Intrinsic.String.Build("ID like '*{0}*'",v.Screen.Form!txtHook.Text.trim,v.Local.sFilter)	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!txtHookMenuRef.Text.trim,<>,"")
+	f.Intrinsic.String.Build("Menu_Ref like '*{0}*'",v.Screen.Form!txtHookMenuRef.Text.trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!txtScreen.Text.trim,<>,"")
+	f.Intrinsic.String.Build("Screen like '*{0}*'",v.Screen.Form!txtScreen.Text.trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!txtHookScriptDesc.Text.trim,<>,"")
+	f.Intrinsic.String.Build("Script_Desc like '*{0}*'",v.Screen.Form!txtHookScriptDesc.Text.trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!txtHookProg.Text.trim,<>,"")
+	f.Intrinsic.String.Build("Program like '*{0}*'",v.Screen.Form!txtHookProg.Text.trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+Function.Data.DataView.Create("DT_Hook","DTV_Hook",22,v.Local.sFilter,"")
+Gui.Form.gsHook.AddGridViewFromDataview("GV_Hook","DT_Hook","DTV_Hook")
+f.Intrinsic.Control.CallSub("Format_gsHook_GV_Hook")
+gui.Form.gsHook.MainView("GV_Hook")
+gui.Form.lblHookRec.Text(V.DataView.DT_Hook!DTV_Hook.RowCount)
+
+f.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Filter_Hook")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Filter_Hook.End
+
+Program.Sub.cmdHookClearHook_Click.Start
+gui.Form.txtHook.Text("")
+Program.Sub.cmdHookClearHook_Click.End
+
+Program.Sub.cmdHookClearMenuRef_Click.Start
+gui.Form.txtHookMenuRef.Text("")
+Program.Sub.cmdHookClearMenuRef_Click.End
+
+Program.Sub.cmdHookClearScreen_Click.Start
+gui.Form.txtScreen.Text("")
+Program.Sub.cmdHookClearScreen_Click.End
+
+Program.Sub.cmdHookClearScript_Click.Start
+gui.Form.txtHookScriptDesc.Text("")
+Program.Sub.cmdHookClearScript_Click.End
+
+Program.Sub.cmdHookClearProg_Click.Start
+gui.Form.txtHookProg.Text("")
+Program.Sub.cmdHookClearProg_Click.End
+
+Program.Sub.cmdHookClearAll_Click.Start
+gui.Form.txtHook.Text("")
+gui.Form.txtHookMenuRef.Text("")
+gui.Form.txtScreen.Text("")
+gui.Form.txtHookScriptDesc.Text("")
+gui.Form.txtHookProg.Text("")
+Program.Sub.cmdHookClearAll_Click.End
+
+'==============================================================================End - Hook  ===============================================================================================================================
+
+
+'==============================================================================Begin - Hook  Association ==========================================================================================================================================================================================================================
+Program.Sub.Load_Hook_Association.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Hook_Association")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sSQL)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading HookAsso Table...")
+F.Intrinsic.Control.If(V.DataTable.DT_HookAsso.Exists,=,True)
+	F.Data.DataTable.Close("DT_HookAsso")
+F.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("DT_HookAsso","conx","select  ID,SEQ,SCRIPT_NAME,SCRIPT_PATH,ACTIVE_FLAG,SYNC_FLAG,TRACE_FLAG,RUNTIME_VER from Hook_Association",true)	
+Gui.Form.gsHookAsso.AddGridViewFromDataTable("GV_HookAsso","DT_HookAsso")
+f.Intrinsic.Control.CallSub("format_gsHookAsso_gv_HookAsso")
+gui.Form.gsHookAsso.MainView("GV_HookAsso")
+gui.Form.txtHookAssoRec.Text(v.DataTable.DT_HookAsso.RowCount)
+f.Intrinsic.UI.CloseWaitDialog
+
+f.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Hook_Association")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Hook_Association.End
+
+Program.Sub.format_gsHookAsso_gv_HookAsso.Start
+gui.Form.gsHookAsso.SuspendLayout()
+f.Intrinsic.Control.CallSub(set_grid_options,"gs","gsHookAsso","GV","GV_HookAsso")
+gui.Form.gsHookAsso.setColumnProperty("GV_HookAsso","ID","MaxWidth","70")
+gui.Form.gsHookAsso.setColumnProperty("GV_HookAsso","SEQ","MaxWidth","50")
+gui.Form.gsHookAsso.setColumnProperty("GV_HookAsso","ACTIVE_FLAG","MaxWidth","80")
+gui.Form.gsHookAsso.setColumnProperty("GV_HookAsso","SYNC_FLAG","MaxWidth","80")
+gui.Form.gsHookAsso.setColumnProperty("GV_HookAsso","TRACE_FLAG","MaxWidth","80")
+gui.Form.gsHookAsso.setColumnProperty("GV_HookAsso","RUNTIME_VER","MaxWidth","80")
+gui.Form.gsHookAsso.setColumnProperty("GV_HookAsso","SCRIPT_NAME","MINWidth","180")
+gui.Form.gsHookAsso.ResumeLayout()
+Program.Sub.format_gsHookAsso_gv_HookAsso.End
+
+Program.Sub.Filter_HookAsso.Start
+F.Intrinsic.Control.SetErrorHandler("Filter_HookAsso")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sFilter,sHold)
+
+f.Intrinsic.Control.If(V.DataView.DT_HookAsso!DTV_HookAsso.Exists,=,true)	
+	Function.Data.DataView.Close("DT_HookAsso","DTV_HookAsso")
+f.Intrinsic.Control.endif
+
+f.Intrinsic.Control.If(v.Screen.Form!txtHookAssoID.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("ID like '*{0}*'",v.Screen.Form!txtHookAssoID.Text.Trim,v.Local.sFilter)	
+f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.If(txtHookAssoScriptname.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Script_Name like '*{0}*'",v.Screen.Form!txtHookAssoScriptname.Text.Trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!txtHookAssoScriptPath.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Script_Path like '*{0}*'",v.Screen.Form!txtHookAssoScriptPath.Text.Trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+Function.Data.DataView.Create("DT_HookAsso","DTV_HookAsso",22,v.Local.sFilter,"")
+Gui.Form.gsHookAsso.AddGridViewFromDataview("GV_HookAsso","DT_HookAsso","DTV_HookAsso")
+f.Intrinsic.Control.CallSub("format_gsHookAsso_gv_HookAsso")
+gui.Form.gsHookAsso.MainView("GV_HookAsso")
+gui.Form.txtHookAssoRec.Text(V.DataView.DT_HookAsso!DTV_HookAsso.RowCount)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Filter_HookAsso")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Filter_HookAsso.End
+
+Program.Sub.cmdHookAssoClearID_Click.Start
+gui.Form.txtHookAssoID.Text("")
+Program.Sub.cmdHookAssoClearID_Click.End
+
+Program.Sub.cmdHookAssoClearScriptName_Click.Start
+gui.Form.txtHookAssoScriptname.Text("")
+Program.Sub.cmdHookAssoClearScriptName_Click.End
+
+Program.Sub.cmdHookAssoClearScriptPath_Click.Start
+gui.Form.txtHookAssoScriptPath.Text("")
+Program.Sub.cmdHookAssoClearScriptPath_Click.End
+
+Program.Sub.cmdHookAssoClearAll_Click.Start
+gui.Form.txtHookAssoID.Text("")
+gui.Form.txtHookAssoScriptname.Text("")
+gui.Form.txtHookAssoScriptPath.Text("")
+Program.Sub.cmdHookAssoClearAll_Click.End
+
+'==============================================================================End Hook Association  ==========================================================================================================================================================================================================================
+
+
+'==============================================================================Begin - Hook  Maintenance Log=======================================================================================================================================================================================================================
+Program.Sub.Load_Hook_Maint_Log.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Hook_Maint_Log")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading Hook Maintenance Log Table...")
+F.Intrinsic.Control.If(V.DataTable.DT_HookMaintLog.Exists,=,True)
+	F.Data.DataTable.Close("DT_HookMaintLog")
+F.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("DT_HookMaintLog","conx","select CHG_DATE,CHG_TIME,HOOK,GSS_USER,TERMINAL,SEQ,SCRIPT_NAME,SCRIPT_PATH,ASYNC,VERSION from Hook_Maint_Log",true)	
+Gui.Form.gsHookMaintLog.AddGridViewFromDataTable("GV_HookMaintLog","DT_HookMaintLog")
+f.Intrinsic.Control.CallSub("Format_gsHookMaintLog_GV_HookMaintLog")
+gui.Form.gsHookMaintLog.MainView("GV_HookMaintLog")
+gui.Form.txtHookMaintRec.Text(v.DataTable.DT_HookMaintLog.RowCount)
+f.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Hook_Maint_Log")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Hook_Maint_Log.End
+
+Program.Sub.Format_gsHookMaintLog_GV_HookMaintLog.Start
+gui.Form.gsHookMaintLog.SuspendLayout()
+f.Intrinsic.Control.CallSub(set_grid_options,"gs","gsHookMaintLog","GV","GV_HookMaintLog")
+gui.Form.gsHookMaintLog.setColumnProperty("GV_HookMaintLog","CHG_DATE","MaxWidth","70")
+gui.Form.gsHookMaintLog.setColumnProperty("GV_HookMaintLog","CHG_TIME","MaxWidth","70")
+gui.Form.gsHookMaintLog.setColumnProperty("GV_HookMaintLog","HOOK","MaxWidth","70")
+gui.Form.gsHookMaintLog.setColumnProperty("GV_HookMaintLog","GSS_USER","MaxWidth","70")
+gui.Form.gsHookMaintLog.setColumnProperty("GV_HookMaintLog","TERMINAL","MaxWidth","70")
+gui.Form.gsHookMaintLog.setColumnProperty("GV_HookMaintLog","SEQ","MaxWidth","60")
+gui.Form.gsHookMaintLog.setColumnProperty("GV_HookMaintLog","ASYNC","MaxWidth","40")
+gui.Form.gsHookMaintLog.setColumnProperty("GV_HookMaintLog","VERSION","MaxWidth","50")
+gui.Form.gsHookMaintLog.setColumnProperty("GV_HookMaintLog","SCRIPT_NAME","MinWidth","150")
+gui.Form.gsHookMaintLog.ResumeLayout()
+Program.Sub.Format_gsHookMaintLog_GV_HookMaintLog.End
+
+Program.Sub.Filter_HookMaint.Start
+F.Intrinsic.Control.SetErrorHandler("Filter_HookMaint")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sFilter,sHold)
+
+f.Intrinsic.Control.If(V.DataView.DT_HookMaintLog!DTV_HookMaintLog.Exists,=,true)	
+	Function.Data.DataView.Close("DT_HookMaintLog","DTV_HookMaintLog")
+f.Intrinsic.Control.endif
+
+f.Intrinsic.Control.If(v.Screen.Form!txtHookMaintDate.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("CHG_Date like '*{0}*'",v.Screen.Form!txtHookMaintDate.Text.Trim,v.Local.sFilter)	
+f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.If(v.Screen.Form!txtHookMaintTime.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("CHG_Time like '*{0}*'",v.Screen.Form!txtHookMaintTime.Text.Trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!txtHookMaintHook.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Hook like '*{0}*'",v.Screen.Form!txtHookMaintHook.Text.Trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!txtHookMaintScriptName.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Script_Name like '*{0}*'",v.Screen.Form!txtHookMaintScriptName.Text.Trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!txtHookMaintScriptPath.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Script_Path like '*{0}*'",v.Screen.Form!txtHookMaintScriptPath.Text.Trim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+Function.Data.DataView.Create("DT_HookMaintLog","DTV_HookMaintLog",22,v.Local.sFilter,"")
+Gui.Form.gsHookMaintLog.AddGridViewFromDataview("GV_HookMaintLog","DT_HookMaintLog","DTV_HookMaintLog")
+f.Intrinsic.Control.CallSub("Format_gsHookMaintLog_GV_HookMaintLog")
+gui.Form.gsHookMaintLog.MainView("GV_HookMaintLog")
+gui.Form.txtHookMaintRec.Text(V.DataView.DT_HookMaintLog!DTV_HookMaintLog.RowCount)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Filter_HookMaint")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Filter_HookMaint.End
+
+Program.Sub.cmdHookMaintClearDate_Click.Start
+gui.Form.txtHookMaintDate.text("")
+Program.Sub.cmdHookMaintClearDate_Click.End
+
+Program.Sub.cmdHookMaintClearTime_Click.Start
+gui.Form.txtHookMaintTime.text("")
+Program.Sub.cmdHookMaintClearTime_Click.End
+
+Program.Sub.cmdHookMaintClearHook_Click.Start
+gui.Form.txtHookMaintHook.text("")
+Program.Sub.cmdHookMaintClearHook_Click.End
+
+Program.Sub.cmdHookMaintClearScriptName_Click.Start
+gui.Form.txtHookMaintScriptName.text("")
+Program.Sub.cmdHookMaintClearScriptName_Click.End
+
+Program.Sub.cmdHookMaintClearScriptPath_Click.Start
+gui.Form.txtHookMaintScriptPath.text("")
+Program.Sub.cmdHookMaintClearScriptPath_Click.End
+
+Program.Sub.cmdHookMaintClearAll_Click.Start
+gui.Form.txtHookMaintDate.text("")
+gui.Form.txtHookMaintTime.text("")
+gui.Form.txtHookMaintHook.text("")
+gui.Form.txtHookMaintScriptName.text("")
+gui.Form.txtHookMaintScriptPath.text("")
+Program.Sub.cmdHookMaintClearAll_Click.End
+
+'==============================================================================End - Hook Maintenance Log =========================================================================================================================================================================================================================
+
+
+
+'==============================================================================Begin- Tab BI Report.  ===============================================================================================================================
+Program.Sub.Load_BI.Start
+F.Intrinsic.Control.SetErrorHandler("Load_BI")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading BI Report Table...")
+F.Intrinsic.Control.If(V.DataTable.DT_BI.Exists,=,True)
+	F.Data.DataTable.Close("DT_BI")
+F.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("DT_BI","conx","Select RPT_ID,RPT_SEQ,Description,Crystal_File_Name from BI_RPT order by RPT_ID",true)	
+Gui.Form.gsBI.AddGridViewFromDataTable("GV_BI","DT_BI")
+f.Intrinsic.Control.CallSub("format_gsBI_gv_BI")
+gui.Form.gsBI.MainView("GV_BI")
+gui.Form.lblBiRec.Text(v.DataTable.DT_BI.RowCount)
+f.Intrinsic.UI.CloseWaitDialog
+
+f.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_BI")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_BI.End
+
+Program.Sub.format_gsBI_gv_BI.Start
+gui.Form.gsBI.SuspendLayout()
+f.Intrinsic.Control.CallSub(set_grid_options,"gs","gsBI","GV","GV_BI")
+gui.Form.gsBI.setColumnProperty("GV_BI","RPT_ID","MaxWidth","70")
+gui.Form.gsBI.setColumnProperty("GV_BI","RPT_SEQ","MaxWidth","70")
+gui.Form.gsBI.setColumnProperty("GV_BI","Description","MinWidth","150")
+gui.Form.gsBI.ResumeLayout()
+Program.Sub.format_gsBI_gv_BI.End
+
+Program.Sub.cmdFilterBI_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdFilterBI")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sError,sFilter,sHold)
+
+f.Intrinsic.Control.If(V.DataView.DT_BI!DTV_BI.Exists,=,true)	
+	Function.Data.DataView.Close("DT_BI","DTV_BI")
+f.Intrinsic.Control.endif
+
+f.Intrinsic.Control.If(v.Screen.Form!txtRptID.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("RPT_id like '*{0}*'",v.Screen.Form!txtRptID.Text,v.Local.sFilter)	
+f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.If(v.Screen.Form!txtRptDesc.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Description like '*{0}*'",v.Screen.Form!txtRptDesc.Text,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.Form!txtCrystalFileName.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("Crystal_File_Name like '*{0}*'",v.Screen.Form!txtCrystalFileName.Text,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.sFilter,=,"")
+		v.Local.sFilter.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0} and {1}",v.Local.sFilter,v.Local.sHold,v.Local.sFilter)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.EndIf
+
+Function.Data.DataView.Create("DT_BI","DTV_BI",22,v.Local.sFilter,"")
+Gui.Form.gsBI.AddGridViewFromDataview("GV_BI","DT_BI","DTV_BI")
+f.Intrinsic.Control.CallSub("format_gsBI_gv_BI")
+gui.Form.gsBI.MainView("GV_BI")
+gui.Form.lblBiRec.Text(V.DataView.DT_BI!DTV_BI.RowCount)
+
+f.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdFilterBI")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FYFs_0_1.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdFilterBI_Click.End
+
+Program.Sub.cmdBIClearID_Click.Start
+gui.Form.txtRptID.Text("")
+Program.Sub.cmdBIClearID_Click.End
+
+Program.Sub.cmdBIClearDesc_Click.Start
+gui.Form.txtRptDesc.Text("")
+Program.Sub.cmdBIClearDesc_Click.End
+
+Program.Sub.cmdBIClearFileName_Click.Start
+gui.Form.txtCrystalFileName.Text("")
+Program.Sub.cmdBIClearFileName_Click.End
+
+Program.Sub.cmdBIClearAll_Click.Start
+gui.Form.txtRptID.Text("")
+gui.Form.txtRptDesc.Text("")
+gui.Form.txtCrystalFileName.Text("")
+Program.Sub.cmdBIClearAll_Click.End
+
+'==============================================================================End - Tab BI Report.  ==========================================================================================================================================================================================================================
+
+
+'==============================================================================Begin - Tab Data Visual.  ==========================================================================================================================================================================================================================
+Program.Sub.cmdOK_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdOK_Click_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareLong(iNumOfColumn,iCounter)
+V.Local..BulkDeclareString(sError,sSQL,sColumnName)
+
+f.Intrinsic.UI.InvokeWaitDialog("Processing...")
+
+GUI.Form.gsDataVisual.ClearRows("DTVS_GV")
+
+gui.Form.txtSQL.Text("")
+f.Intrinsic.String.Concat("select ",v.Screen.Form!txtSelect.Text,V.Ambient.NewLine," from ",v.Screen.Form!txtFrom.Text,v.Local.ssql)
+F.Intrinsic.Control.If(V.Screen.Form!txtWhere.Text.Trim,<>,"")
+	f.Intrinsic.String.Concat(v.Local.sSQL,V.Ambient.NewLine," where ",v.Screen.Form!txtWhere.Text,v.Local.ssql)
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.Form!txtGroupBy.Text.Trim,<>,"")
+	f.Intrinsic.String.Concat(v.Local.sSQL,V.Ambient.NewLine," group by ",v.Screen.Form!txtGroupBy.Text,v.Local.ssql)
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.Form!txtOrderBy.Text.Trim,<>,"")
+	f.Intrinsic.String.Concat(v.Local.sSQL,V.Ambient.NewLine," order by ",v.Screen.Form!txtOrderBy.Text,v.Local.ssql)
+f.Intrinsic.Control.EndIf
+Gui.Form.txtSQL.Text(v.Local.sSQL)
+F.Intrinsic.Control.If(V.DataTable.DTVS.Exists,=,True)
+	F.Data.DataTable.Close("DTVS")
+F.Intrinsic.Control.EndIf
+
+f.Data.DataTable.CreateFromSQL("DTVS","conx",v.Local.sSQL,true)
+GUI.Form.gsDataVisual.AddGridviewFromDatatable("DTVS_GV","DTVS")
+
+f.Intrinsic.UI.ChangeWaitStatus("Formatting...")
+gui.Form.gsDataVisual.SuspendLayout()
+gui.Form.gsDataVisual.GetColumnCount("DTVS_GV",v.Local.iNumOfColumn)
+f.Intrinsic.Control.CallSub(set_grid_options,"gs","gsDataVisual","GV","DTVS_GV")
+f.Intrinsic.Math.Sub(v.Local.iNumOfColumn,1,v.Local.iNumOfColumn)
+f.Intrinsic.Control.For(v.Local.iCounter,0,v.Local.iNumOfColumn,1)
+	Gui.Form.gsDataVisual.GetColumnNamebyIndex("DTVS_GV",v.Local.iCounter,v.Local.sColumnName)
+	Gui.Form.gsDataVisual.SetColumnProperty("DTVS_GV",v.Local.sColumnName,"minWIDTH",v.Screen.Form!txtMinWidth.Text.trim)
+	Gui.Form.gsDataVisual.SetColumnProperty("DTVS_GV",v.Local.sColumnName,"AllowEdit",False)
+	Gui.Form.gsDataVisual.SetColumnProperty("DTVS_GV",v.Local.sColumnName,"ReadOnly",True)
+f.Intrinsic.Control.Next(v.Local.iCounter)
+gui.Form.gsDataVisual.ResumeLayout()
+
+gui.Form.gsDataVisual.MainView("DTVS_GV")
+gui.Form.lblSqlRecords.Text(v.DataTable.DTVS.RowCount)
+
+f.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdOK_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	f.Intrinsic.UI.CloseWaitDialog
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdOK_Click.End
+
+Program.Sub.gsDataVisual_RowCellClick.Start
+F.Intrinsic.Control.SetErrorHandler("gsDataVisual_RowCellClick_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sSelect,sError)
+
+F.Intrinsic.Control.If(V.Screen.Form!chkGetColName.Value,=,1)
+	F.Intrinsic.Control.If(V.Screen.Form!txtSelect.Text.TRIM,=,"")
+		gui.Form.txtSelect.Text(V.Args.Column)
+		v.Local.sSelect.Set(v.Args.Column)	
+	F.Intrinsic.Control.Else
+		f.Intrinsic.String.Concat(v.Screen.Form!txtSelect.Text,",",v.Args.Column,v.Local.sSelect)
+	F.Intrinsic.Control.EndIf
+	gui.Form.txtSelect.Text(v.Local.sSelect)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsDataVisual_RowCellClick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.gsDataVisual_RowCellClick.End
+
+Program.Sub.cmdDataVisualSelect_Click.Start
+gui.Form.txtSelect.Text("")
+Program.Sub.cmdDataVisualSelect_Click.End
+
+Program.Sub.cmdDataVisualFrom_Click.Start
+gui.Form.txtFrom.Text("")
+Program.Sub.cmdDataVisualFrom_Click.End
+
+Program.Sub.cmdDataVisualWhere_Click.Start
+gui.Form.txtWhere.Text("")
+Program.Sub.cmdDataVisualWhere_Click.End
+
+Program.Sub.cmdDataVisualGroupBy_Click.Start
+gui.Form.txtGroupBy.Text("")
+Program.Sub.cmdDataVisualGroupBy_Click.End
+
+Program.Sub.cmdDataVisualOrderBy_Click.Start
+gui.Form.txtOrderBy.Text("")
+Program.Sub.cmdDataVisualOrderBy_Click.End
+
+Program.Sub.cmdClearSQL_Click.Start
+gui.Form.txtSelect.Text("")
+gui.Form.txtWhere.Text("")
+gui.Form.txtFrom.Text("")
+gui.Form.txtOrderBy.Text("")
+gui.Form.txtGroupBy.Text("")
+Program.Sub.cmdClearSQL_Click.End
+
+Program.Sub.cmdClearSQL2_Click.Start
+gui.Form.txtSQL.Text("")
+Program.Sub.cmdClearSQL2_Click.End
+
+Program.Sub.cmdRunSQL2_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdOK_Click_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareLong(iNumOfColumn,iCounter)
+V.Local..BulkDeclareString(sError,sColumnName)
+
+f.Intrinsic.Control.If(v.Screen.Form!txtSQL.Text.Trim,=,"")
+	f.Intrinsic.UI.Msgbox("SQL Statement texbox is empty. Please enter SQL statement","No SQL specified")
+	f.Intrinsic.Control.exitsub
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.UI.InvokeWaitDialog("Processing...")
+GUI.Form.gsDataVisual.ClearRows("DTVS_GV")
+F.Intrinsic.Control.If(V.DataTable.DTVS.Exists,=,True)
+	F.Data.DataTable.Close("DTVS")
+F.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("DTVS","conx",v.Screen.Form!txtSQL.Text.Trim,true)
+GUI.Form.gsDataVisual.AddGridviewFromDatatable("DTVS_GV","DTVS")
+f.Intrinsic.UI.ChangeWaitStatus("Formatting...")
+gui.Form.gsDataVisual.SuspendLayout()
+gui.Form.gsDataVisual.GetColumnCount("DTVS_GV",v.Local.iNumOfColumn)
+f.Intrinsic.Control.CallSub(set_grid_options,"gs","gsDataVisual","GV","DTVS_GV")
+f.Intrinsic.Math.Sub(v.Local.iNumOfColumn,1,v.Local.iNumOfColumn)
+f.Intrinsic.Control.For(v.Local.iCounter,0,v.Local.iNumOfColumn,1)
+	Gui.Form.gsDataVisual.GetColumnNamebyIndex("DTVS_GV",v.Local.iCounter,v.Local.sColumnName)
+	Gui.Form.gsDataVisual.SetColumnProperty("DTVS_GV",v.Local.sColumnName,"minWIDTH",v.Screen.Form!txtMinWidth.Text.trim)
+	Gui.Form.gsDataVisual.SetColumnProperty("DTVS_GV",v.Local.sColumnName,"AllowEdit",False)
+	Gui.Form.gsDataVisual.SetColumnProperty("DTVS_GV",v.Local.sColumnName,"ReadOnly",True)
+f.Intrinsic.Control.Next(v.Local.iCounter)
+gui.Form.gsDataVisual.ResumeLayout()
+
+gui.Form.gsDataVisual.MainView("DTVS_GV")
+gui.Form.lblSqlRecords.Text(v.DataTable.DTVS.RowCount)
+
+f.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdOK_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindFields.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdRunSQL2_Click.End
+
+'=================================================================================End - Tab Data Visual.===================================================================================================================================================================================================================
+
+
+'=================================================================================Begin - Tab String  =========================================================================================================================================================================================================================
+Program.Sub.cmdAddColumn_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdAddColumn_Click_Err")
+F.Intrinsic.Control.ClearErrors
+v.Local..BulkDeclareString(sSameColumns,sMap,sError)
+v.Local..BulkDeclareLong(iCounter)
+
+f.Intrinsic.Control.If(v.Screen.Form!chkSameColumnName.Value,=,1)
+	f.Intrinsic.String.Split(v.Screen.Form!txtSameColumnNames.Text,",",v.Local.sSameColumns)
+	f.Intrinsic.Control.For(v.Local.iCounter,0,v.Local.sSameColumns.UBound,1)
+		f.Data.DataTable.AddRow("Map_DT","DataTable_Column",v.Local.sSameColumns(v.Local.iCounter),"DataBase_Column",v.Local.sSameColumns(v.Local.iCounter))
+		f.Intrinsic.Control.If(v.Local.iCounter,=,0)
+			f.Intrinsic.String.Concat(v.Local.sSameColumns(v.Local.iCounter).Trim,"@!@",v.Local.sSameColumns(v.Local.iCounter).Trim,v.Local.sMap)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Concat(v.Local.sMap,"*!*",v.Local.sSameColumns(v.Local.iCounter).Trim,"@!@",v.Local.sSameColumns(v.Local.iCounter).Trim,v.Local.sMap)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Next(v.Local.iCounter)
+	gui.Form.txtSameColumnNames.Text("")
+f.Intrinsic.Control.Else
+	f.Data.DataTable.AddRow("Map_DT","DataTable_Column",v.Screen.Form!txtDTColumn.Text.Trim,"DataBase_Column",v.Screen.Form!txtDBColumn.Text.Trim)
+	f.Intrinsic.String.Concat(v.Screen.Form!txtDTColumn.Text.Trim,"@!@",v.Screen.Form!txtDBColumn.Text.Trim,v.Local.sMap)	
+	f.Intrinsic.Control.CallSub(cmdClearDifColNames_Click)	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.if(v.Screen.Form!txtMap.Text.Trim,=,"")
+	gui.Form.txtMap.Text(v.Local.sMap)
+f.Intrinsic.Control.Else
+	f.Intrinsic.String.Concat(v.Screen.Form!txtMap.Text.trim,"*!*",v.Local.sMap,v.Local.sMap)
+	gui.Form.txtMap.Text(v.Local.sMap)
+f.Intrinsic.Control.EndIf
+gui.Form.txtDTColumn.SetFocus
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdAddColumn_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdAddColumn_Click.End
+
+Program.Sub.chkSameColumnName_Click.Start
+F.Intrinsic.Control.SetErrorHandler("chkSameColumnName_Click_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+f.Intrinsic.Control.If(v.Screen.Form!chkSameColumnName.Value,=,1)
+	gui.Form.txtDTColumn.Enabled(False)
+	gui.Form.txtDBColumn.Enabled(False)
+	gui.Form.txtDBColumn.BackColor(v.Color.LtGray)
+	gui.Form.txtDTColumn.BackColor(v.Color.LtGray)
+	gui.Form.txtSameColumnNames.BackColor(v.Color.White)
+	gui.Form.txtSameColumnNames.Enabled(True)
+f.Intrinsic.Control.Else
+	gui.Form.txtDTColumn.Enabled(True)
+	gui.Form.txtDBColumn.Enabled(True)
+	gui.Form.txtDBColumn.BackColor(v.Color.White)
+	gui.Form.txtDTColumn.BackColor(v.Color.white)
+	gui.Form.txtSameColumnNames.BackColor(v.Color.LtGray)
+	gui.Form.txtSameColumnNames.Enabled(False)		
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkSameColumnName_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.chkSameColumnName_Click.End
+
+Program.Sub.cmdClearDifColNames_Click.Start
+gui.Form.txtDBColumn.Text("")
+gui.Form.txtDTColumn.Text("")
+Program.Sub.cmdClearDifColNames_Click.End
+
+Program.Sub.cmdClear_Click.Start
+gui.Form.txtMap.Text("")
+Program.Sub.cmdClear_Click.End
+
+Program.Sub.cmdClearSameColumnNames_Click.Start
+gui.Form.txtSameColumnNames.Text("")
+Program.Sub.cmdClearSameColumnNames_Click.End
+
+Program.Sub.cmdClearGSMap_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdClearGSMap_Click_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+f.Intrinsic.Control.CallSub(create_map_dt)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdClearGSMap_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdClearGSMap_Click.End
+
+Program.Sub.create_Map_DT.Start
+F.Intrinsic.Control.SetErrorHandler("create_Map_DT_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.DataTable.Map_DT.Exists,=,True)
+	F.Data.DataTable.Close("Map_DT")
+F.Intrinsic.Control.EndIf
+
+f.Data.DataTable.Create("Map_DT",true)
+f.Data.DataTable.AddColumn("Map_DT","DataTable_Column","string","")
+f.Data.DataTable.AddColumn("Map_DT","DataBase_Column","string","")
+Gui.Form.gsMap.AddGridViewFromDataTable("Map_GV","Map_DT")
+Gui.Form.gsMap.SetColumnProperty("Map_GV","DataTable_Column","AllowEdit","True")
+Gui.Form.gsMap.SetColumnProperty("Map_GV","DataTable_Column","ReadOnly","False")
+Gui.Form.gsMap.SetColumnProperty("Map_GV","DataBase_Column","AllowEdit","True")
+Gui.Form.gsMap.SetColumnProperty("Map_GV","DataBase_Column","ReadOnly","False")
+gui.Form.gsMap.MainView("Map_GV")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("create_Map_DT_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.create_Map_DT.End
+
+Program.Sub.txtString_Change.Start
+v.Local.sString.Declare(string)
+v.Local.sString.Set(v.Screen.Form!txtString.Text)
+gui.Form.lblLetterCount.Text(v.Local.sString.Length)
+Program.Sub.txtString_Change.End
+
+Program.Sub.cmdCountBigString_Click.Start
+'This is a test, as we can not split v.Ambient.NewLine, trying to find different way
+v.Local..BulkDeclareString(sSQL,sString,sHold)
+v.Local.iNewLine.Declare(long)
+
+F.Intrinsic.String.Build("Update B_String set String = '{0}' where ID = 1",v.Screen.Form!txtStringBigBox.Text,v.Local.sSQL)
+F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+f.ODBC.Connection!conx.ExecuteAndReturn("Select String from B_String where ID = 1",v.Local.sString)
+f.Intrinsic.String.Split(v.Local.sString,v.Ambient.NewLine,v.Local.sHold)
+gui.Form.lblNewLine.Text(v.Local.sHold.UBound)
+gui.Form.lblLetterCountBigString.Text(v.Local.sString.Length)
+Program.Sub.cmdCountBigString_Click.End
+
+Program.Sub.cmdClearString_Click.Start
+gui.Form.txtString.Text("")
+Program.Sub.cmdClearString_Click.End
+
+Program.Sub.cmdClearBigString_Click.Start
+gui.Form.txtStringBigBox.Text("")
+Program.Sub.cmdClearBigString_Click.End
+
+Program.Sub.cmdAddgsString_Click.Start
+Program.Sub.cmdAddgsString_Click.End
+
+Program.Sub.cmdGenString_Click.Start
+Program.Sub.cmdGenString_Click.End
+
+Program.Sub.cmdGenerate_Click.Start
+v.Local.iCnt.Declare(long)
+v.Local..BulkDeclareString(sError,sHold,sText)
+f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.Map_DT.RowCount--,1)
+	f.Intrinsic.String.Build("{0}{1}{2}",v.DataTable.Map_DT(v.Local.iCnt).DataTable_Column!FieldValTrim,v.Screen.Form!txtInner.Text.Trim,v.DataTable.Map_DT(v.Local.iCnt).DataBase_Column!FieldValTrim,v.Local.sHold)
+	f.Intrinsic.Control.If(v.Local.iCnt,=,0)
+		v.Local.sText.Set(v.Local.sHold)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0}{1}{2}",v.Local.sText,v.Screen.Form!txtOuter.Text.Trim,v.Local.sHold,v.Local.sText)	
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Next(v.Local.iCnt)
+
+f.Intrinsic.String.Build("{0}{1}{2}",v.Screen.Form!txtMap.Text.Trim,v.Ambient.NewLine,v.Local.sText,v.Local.sText)
+gui.Form.txtMap.Text(v.Local.sText)
+Program.Sub.cmdGenerate_Click.End
+
+Program.Sub.Form_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("Form_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+f.ODBC.Connection!conx.Close
+f.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Form_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: FindYourFields_Bis.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Form_UnLoad.End
+
+Program.Sub.cmdSwitchDB_Click.Start
+gui.Form.cmdSwitchDB.Visible(False)
+gui.Form.lblDBLIst.Visible(True)
+gui.Form.cboDatabase.Visible(True)
+gui.Form.cmdRefresh.Visible(True)
+Program.Sub.cmdSwitchDB_Click.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$2/14/2017 1:03:43 PM$}$False
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$This project was quoted by Strider Smith and coded by Sisco Quiroz
+September 2016.
+
+This code will run from a custom menu item under Production>Shop Floor Control>Transactions>Transfer WIP to WIP for multiple jobs.
+Program.Sub.Comments.End
